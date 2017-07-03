@@ -1,0 +1,46 @@
+用户表
+	id
+	nickname
+	gender
+	register_email
+	last_login_ip
+	last_login_time
+	faceid
+	intro
+	level
+
+
+
+用户头像表
+	原图
+	小图
+	中图
+	大图
+
+
+帖子主表
+	id
+	uid
+	title
+	content
+	tags
+
+
+帖子分类表
+
+
+
+跟帖表
+
+新闻表------>>> 套用f_post表
+
+banner表
+
+banner分类表
+
+tag表
+
+tag分类表
+
+tag_relation表
+
