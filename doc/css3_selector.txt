@@ -1,0 +1,27 @@
+#div>li      			#div下的li标签，但是不包含li子孙标签里又出现的li
+
+#div+p		 			#div紧跟着的一个p标签。
+
+#div~p		 			#div紧跟着的所有同级p标签
+
+input[name=hehe]  		属性选择器
+
+#ul li:first-child			#ul下的第一个li
+
+#ul li:last-child			#ul下最后一个li
+ 
+#ul li:nth-child(3)			#ul下第三个li
+
+
+伪对象选择器
+#ul li:before {					#ul下的li，每个li的content前，加上2333
+	content: '2333';
+}
+#ul li:after {
+	content: '666';
+}
+
+
+
+
+
