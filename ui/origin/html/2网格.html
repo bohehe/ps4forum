@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--width 属性控制设备的宽度。假设您的网站将被带有不同屏幕分辨率的设备浏览，那么将它设置为 device-width 可以确保它能正确呈现在不同设备上。initial-scale=1.0 确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放。
+	-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+    <style type="text/css">
+    .bg {
+        background-color: #dedef8;
+        box-shadow: inset 1px -1px 1px #333, inset -1px 1px 1px #333;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!--小屏幕设备显示6列，中屏设备显示4列，大屏设备显示3列-->
+            <div class="col-sm-6 col-md-4 col-lg-3 bg">
+                hello
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 bg">
+                boot
+            </div>
+            <!--clearfix类可以显示网格的宽度-->
+            <div class="clearfix"></div>
+            <div class="col-sm-6 col-md-4 col-lg-3 bg">
+                strap
+            </div>
+            <!--网格的偏移列：http://blog.csdn.net/duruiqi_fx/article/details/53318366-->
+            <div class="col-sm-6 col-md-4 col-lg-3 col-md-offset-3 bg">
+                strap
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+	<div class="container">
+		<div class="row">
+        <!--网格内还可以继续分割出网格，外层需.row-->
+	        <div class="col-md-3 bg">hello</div>
+	        <div class="col-md-9 bg">
+	            <div class="row">
+	                <div class="col-sm-6 bg">boot</div>
+	                <div class="col-sm-6 bg">strap</div>
+	            </div>
+	        </div>
+    	</div>
+	</div>
+	<br><br>
+	<div class="container">
+		<!-- col-*-push/pull-* 用于给列排序 -->
+		<div class="row">
+			<div class="col-md-3 col-md-push-9 bg">left</div>
+			<div class="col-md-9 col-md-pull-3 bg">right</div>
+		</div>
+	</div>
+</body>
+
+</html>
