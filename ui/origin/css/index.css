@@ -1,8 +1,11 @@
 #banner-index {
-    max-width: 900px;
+    max-width: 1170px;
     max-height: 360px;
     overflow: hidden;
     margin: 0 auto;
+}
+#container-body{
+
 }
 
 #container-right aside {
@@ -24,7 +27,9 @@
 #container-right {
     max-height: 800px;
 }
-
+#container-left{
+	padding: 0;
+}
 #container-left-content {
     height: 1980px;
     background-color: #fff;
