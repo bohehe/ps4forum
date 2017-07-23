@@ -2,15 +2,20 @@
 	max-width: 900px;max-height: 360px;overflow: hidden;margin: 0 auto;
 }
 #container-right aside{
-	background-color: #fff;
-	margin-bottom: 30px;
-	padding: 30px;
+	background-color: #fff;margin-bottom: 30px;padding: 30px;
 }
 #container-right aside ul{
-	margin: 0;
-	padding: 0;
+	margin: 0;padding: 0;
 }
 #container-right aside li{
-	list-style-type: none;
-	padding: 3px;
+	list-style-type: none;padding: 3px;
+}
+#container-right{
+	max-height: 800px;
+}
+#container-left-content{
+	height: 1980px;background-color: #fff;
+}
+#container-left-content .list-group a{
+	border: none;
 }
