@@ -10,3 +10,8 @@ body{
 a:hover{
 	text-decoration:none;color: #000;
 }
+.ava{
+	border-radius: 50%;
+	border: 1px solid #fff;
+	margin-top: 8px;
+}
