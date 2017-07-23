@@ -1,0 +1,16 @@
+#banner-index{
+	max-width: 900px;max-height: 360px;overflow: hidden;margin: 0 auto;
+}
+#container-right aside{
+	background-color: #fff;
+	margin-bottom: 30px;
+	padding: 30px;
+}
+#container-right aside ul{
+	margin: 0;
+	padding: 0;
+}
+#container-right aside li{
+	list-style-type: none;
+	padding: 3px;
+}
