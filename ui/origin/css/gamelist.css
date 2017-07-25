@@ -1,6 +1,28 @@
-.search-game-btn{
-	margin-bottom: 20px;
+.search-game-btn {
+    margin-bottom: 20px;
 }
-.search-game-btn button{
-	margin: 0 3px;
+.search-game-btn button {
+    margin: 0 3px;
+}
+#gamelist .every-game {
+	padding: 30px 15px;
+	margin: 0px;
+	border-bottom: 1px dotted #ccc;
+}
+#gamelist .media-body{
+	padding: 10px;
+}
+#gamelist .text-muted{
+	margin-top: 10px;
+}
+.gamelist {
+    border: 1px solid #ccc;
+    max-height: 1800px;
+    border-radius: 6px;
+}
+#gamelist .game-list-attr{
+	margin-top: 15px;
+}
+#gamelist .game-list-attr span{
+	margin-right: 20px;
 }
