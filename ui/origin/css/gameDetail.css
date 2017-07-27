@@ -1,0 +1,10 @@
+#game-info-list-left{
+	padding: 0;
+}
+#game-info-list-left a{
+	border: none;
+	border-radius: 3px;
+}
+#game-info-list-left a.active{
+	background-color: #ccc;
+}

@@ -4,6 +4,11 @@
 .search-game-btn button {
     margin: 0 3px;
 }
+#main-body{
+	max-width: 1170px;
+	max-height: 1980px;
+	background-color: #fff;
+}
 #gamelist .every-game {
 	padding: 30px 15px;
 	margin: 0px;
