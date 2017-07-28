@@ -1,10 +1,13 @@
 #game-info-list-left{
 	padding: 0;
 }
-#game-info-list-left a{
-	border: none;
-	border-radius: 3px;
+#game-info-list-left h4{
+	padding: 10px 15px;
+	margin: 10px 0 0 0;
 }
-#game-info-list-left a.active{
-	background-color: #ccc;
+#game-info-list-left .list-group-item{
+	border: none;
+}
+#main-body{
+	margin-top: 20px;
 }

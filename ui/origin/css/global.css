@@ -1,21 +1,20 @@
 body {
     background-color: #efefef;
 }
-
 #navigator {
     background-color: #dedcdc;
     margin-bottom: 10px;
 }
-
+#navigator .container{
+	width: 1080px;
+}
 #navigator ul.dropdown-menu {
     min-width: 110px;
 }
-
 a:hover {
     text-decoration: none;
     color: #000;
 }
-
 .ava {
     border-radius: 50%;
     border: 1px solid #fff;
