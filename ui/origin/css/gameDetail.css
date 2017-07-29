@@ -12,6 +12,9 @@
 #main-body{
 	margin-top: 20px;
 }
+.game-info-block{
+	margin-bottom: 40px;	
+}
 .game-info-title{
 	margin: 20px 0;
 	background-color: #fff;
@@ -20,4 +23,22 @@
     color: #0098ee;
     border-left: 3px solid #0098ee;
     font: 400 24px/26px "Microsoft Yahei";
+}
+.game-info-block .rating-container{
+	float: left;
+	padding-top: 4px;
+	margin-right: 10px;
+}
+.star-text{
+	line-height: 46px;
+	margin: 0;
+}
+.game-star-score{
+	float: left;
+	margin: 0;
+}
+.game-star-score-my{
+	float: left;
+	width: 250px;
+	height: 300px;
 }
