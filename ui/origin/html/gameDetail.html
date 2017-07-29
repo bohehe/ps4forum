@@ -11,7 +11,10 @@
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/gameDetail.css">
     <link rel="stylesheet" type="text/css" href="../css/star-rating.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/touchTouch.css">
+    <link rel="stylesheet" type="text/css" href="../css/game-thumb-img.css">
     <title>游戏详情</title>
+    <script type="text/javascript" src="../js/touchTouch.jquery.js"></script>
 </head>
 
 <body>
@@ -70,25 +73,25 @@
                     <li class="list-group-item">
                         <b>所属系列：</b><span>血源诅咒</span>
                     </li>
-                     <li class="list-group-item">
+                    <li class="list-group-item">
                         <b>语言：</b><span>繁中 简中 日语</span>
                     </li>
-                     <li class="list-group-item">
+                    <li class="list-group-item">
                         <b>类型：</b><span>RPG && 动作冒险</span>
                     </li>
-                     <li class="list-group-item">
+                    <li class="list-group-item">
                         <b>开发商：</b><span>From Software</span>
                     </li>
                 </ul>
                 <h4>发行信息</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <b>发行商：</b><span>索尼</span>
+                        <b>平台：</b><span>PS4  XB1</span>
                     </li>
-                     <li class="list-group-item">
+                    <li class="list-group-item">
                         <b>发行阶段：</b><span>正式版</span>
                     </li>
-                     <li class="list-group-item">
+                    <li class="list-group-item">
                         <b>售价：</b><span>308港币</span>
                     </li>
                     <li class="list-group-item">
@@ -98,12 +101,31 @@
             </div>
             <div class="col-md-8 col-md-push-1">
                 <div class="row">
-                    <div class="col-md-10 col-md-push-1" style="height: 500px;background-color: #fff;"></div>
+                    <div class="col-md-10 col-md-push-1" style="height: 500px;background-color: #fff;">
+                        <div style="margin-bottom: 40px;">
+                            <h3 class="game-info-title">游戏图片</h3>
+                            <div class="clearfix img-gather" id="thumbs">
+                                <a href="../images/b1.jpg" style="background-image:url(../images/b1.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b2.jpg" style="background-image:url(../images/b2.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b3.jpg" style="background-image:url(../images/b3.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b6.jpg" style="background-image:url(../images/b6.jpg)" title="血源诅咒"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="game-info-title">游戏点评</h3>
+                            
+                        </div>
+                    </div>
                     <div class="col-md-10 col-md-push-1" style="height: 800px;background-color: #fff;margin-top: 20px;"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script type="text/javascript">
+$(function() {
+    $('#thumbs a').touchTouch()
+})
+</script>
 
 </html>
