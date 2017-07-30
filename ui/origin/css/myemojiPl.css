@@ -1,5 +1,6 @@
 #game-comment .Main {
     max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 #game-comment .Input_Box {

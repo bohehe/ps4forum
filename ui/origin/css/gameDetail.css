@@ -1,5 +1,11 @@
 #game-info-list-left{
 	padding: 0;
+	height: 500px;
+	background-color: #fff;
+}
+#game-info-list-right{
+	height: 820px;
+	background-color: #fff;
 }
 #game-info-list-left h4{
 	padding: 10px 15px;
@@ -10,6 +16,11 @@
 	border: none;
 }
 #main-body{
+	margin-top: 20px;
+}
+#game-comment{
+	max-height: 1200px;
+	background-color: #fff;
 	margin-top: 20px;
 }
 .game-info-block{
