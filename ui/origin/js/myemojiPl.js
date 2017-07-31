@@ -141,7 +141,7 @@
 				var emojiContainer = faceDiv.find('.emoji_container');
 				if (emojiContainer.children().length <= 0) {
 					faceDiv.css({
-						width: Math.floor(InputText.width() / 30) * 30 + 'px',
+						// width: Math.floor(InputText.width() / 30) * 30 + 'px',
 						display: 'block'
 					});
 					for (var emojilist in emojiconfig) {
