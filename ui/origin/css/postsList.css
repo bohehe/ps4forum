@@ -1,6 +1,14 @@
 .posts-lists h4 span{
 	margin-right: 10px;
 }
+.posts-lists .list-group-item{
+	margin-bottom: 0px;
+	border: none;
+    border-bottom: 1px dotted #ccc
+}
+.posts-lists .list-group-item:first-child{
+	border-top: 1px dotted #ccc;
+}
 .posts-list-hover{
 	background-color: #F5F5F5;
 }

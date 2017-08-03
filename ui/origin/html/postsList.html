@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/postsList.css">
+    <link rel="stylesheet" type="text/css" href="../css/game-thumb-img.css">
+    <link rel="stylesheet" type="text/css" href="../css/touchTouch.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/touchTouch.jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
@@ -86,7 +90,7 @@
                         </span>
                     </h4>
                 </div>
-                <div href="#" class="list-group-item">
+                <div class="list-group-item">
                     <h4 class="list-group-item-heading">
                         <span class="label label-primary">置顶</span><span class="label label-danger">精</span>
                         <span>
@@ -103,9 +107,13 @@
                             <p class="list-group-item-text">
                                 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
                             </p>
-                            <img width="210px" height="135px" src="../images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-                            <img width="210px" height="135px" src="../images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-                            <img width="210px" height="135px" src="../images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
+                            <div class="clearfix img-gather" id="thumbs">
+                                <a href="../images/b1.jpg" style="background-image:url(../images/b1.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b2.jpg" style="background-image:url(../images/b2.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b3.jpg" style="background-image:url(../images/b3.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b6.jpg" style="background-image:url(../images/b6.jpg)" title="血源诅咒"></a>
+                            </div>
+                            
                         </div>
                         <div class="col-md-3">
                             <p class="posts-lists-right">
@@ -180,6 +188,8 @@
     </div>
 </body>
 <script type="text/javascript">
+    $('#thumbs a').touchTouch()
+
     $('.posts-lists .list-group-item').hover(function() {
         $(this).addClass('posts-list-hover')
     }, function() {
