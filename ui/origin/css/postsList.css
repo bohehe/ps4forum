@@ -5,5 +5,8 @@
 	background-color: #F5F5F5;
 }
 .posts-lists-right{
-
+	text-align: center;
+}
+.posts-lists-right span{
+	padding-left: 32px;
 }
