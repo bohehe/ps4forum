@@ -1,7 +1,10 @@
 .post-detail-title{
-	padding: 10px;
+	padding: 10px 20px;
+	border: 1px solid #e1e1e1;
 }
-
+.post-detail-title span{
+	margin-top: -5px;
+}
 #posts-detail-list li{
 	list-style-type: none;
 }
