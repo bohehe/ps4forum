@@ -1,10 +1,28 @@
 .post-detail-title{
 	padding: 10px 20px;
-	border: 1px solid #e1e1e1;
+	border: 1px solid #E1E4E6;
 }
 .post-detail-title span{
 	margin-top: -5px;
 }
 #posts-detail-list li{
 	list-style-type: none;
+	border-bottom: 1px solid #E1E4E6;
+	background-color: rgb(251, 251, 253);
+}
+.posts-detail-left{
+	margin-top: 20px;
+}
+.posts-detail-right{
+	padding: 20px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.posts-detail-right .posts-content{
+	line-height: 24px;
+	margin: 10px 0;
+}
+.posts-detail-right img{
+	max-width: 100%;
+	margin: 10px 0;
 }
