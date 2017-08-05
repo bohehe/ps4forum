@@ -26,3 +26,9 @@
 	max-width: 100%;
 	margin: 10px 0;
 }
+.posts-detail-right .posts-content-img{
+	text-align: center;
+}
+.posts-detail-right .posts-content-info{
+	color: #999;
+}
