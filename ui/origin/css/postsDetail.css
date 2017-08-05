@@ -32,3 +32,7 @@
 .posts-detail-right .posts-content-info{
 	color: #999;
 }
+.posts-detail-right .posts-content-reply{
+	background-color: #f7f8fa;
+	clear: both;
+}
