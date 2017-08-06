@@ -33,6 +33,9 @@
 	color: #999;
 }
 .posts-detail-right .posts-content-reply{
-	background-color: #f7f8fa;
+	background-color: rgb(251, 251, 253);
 	clear: both;
+}
+.posts-detail-right .posts-content-reply-wrap{
+	padding: 0 10px;
 }
