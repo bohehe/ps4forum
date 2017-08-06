@@ -39,3 +39,22 @@
 .posts-detail-right .posts-content-reply-wrap{
 	padding: 0 10px;
 }
+.posts-content-reply-wrap li{
+    zoom: 1;
+}
+.posts-content-reply-cont{
+    margin-left: 45px;
+    zoom: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    position: relative;
+}
+.posts-content-reply-cont-r{
+	position: relative;
+	left: 0;
+	top: -35px;
+}
+.posts-content-reply-cont-p{
+    float: right;
+    margin-top: -20px;
+}
