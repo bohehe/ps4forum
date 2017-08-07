@@ -21,11 +21,11 @@
 }
 
 #game-comment .Input_text {
-    width: 100%;
     min-height: 111px;
     padding: 5px;
+    margin: 10px;
     outline: none;
-    border: 0px solid #fff;
+    border: 1px solid #ccc;
     resize: none;
     font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
     -moz-border-radius: 5px;
@@ -93,6 +93,7 @@
     position: absolute;
     left: 0px;
     top: -200px;
+    z-index: 9999;
     display: none;
     background-color: #fff;
     -moz-border-radius: 5px 5px 0 0;
