@@ -57,5 +57,7 @@
 }
 .posts-content-reply-cont-p{
     float: right;
-    margin-top: -20px;
+	position: relative;
+	right: 0;
+	top: -20px;
 }
