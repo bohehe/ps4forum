@@ -4,7 +4,7 @@
 .posts-lists .list-group-item{
 	margin-bottom: 0px;
 	border: none;
-    border-bottom: 1px dotted #ccc
+    border-bottom: 1px dotted #ccc;
 }
 .posts-lists .list-group-item:first-child{
 	border-top: 1px dotted #ccc;

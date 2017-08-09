@@ -18,3 +18,12 @@
 .posts-lists-right span{
 	padding-left: 32px;
 }
+.trade-public-form{
+	padding: 30px;
+}
+.trade-public-warning{
+	color: #b94a48;
+	background-color: #FAF8F0;
+	padding: 10px;
+	line-height: 180%;
+}

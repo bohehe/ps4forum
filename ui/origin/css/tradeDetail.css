@@ -25,6 +25,8 @@
 }
 .text-content caption{
 	color: #b94a48;
+	background-color: #FAF8F0;
+	padding: 10px;
 	margin-bottom: 10px;
 }
 .text-content .article{
