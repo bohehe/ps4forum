@@ -24,6 +24,7 @@
 .trade-public-warning{
 	color: #b94a48;
 	background-color: #FAF8F0;
-	padding: 10px;
+	padding: 10px 10px 10px 70px;
 	line-height: 180%;
+	margin-bottom: 25px;
 }
