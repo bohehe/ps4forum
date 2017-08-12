@@ -57,7 +57,7 @@
     overflow: hidden;
     margin: 25px 0;
     background-color: white;
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    box-shadow: 0 0 3px #c7c1c1;
 }
 #user-tab li{
     float: left;
@@ -77,9 +77,16 @@
 }
 #user-msg-ulist li{
 	border: none;
-	box-shadow: 0 0 3px rgba(0,0,0,.1);
+	box-shadow: 0 0 3px #c7c1c1;
 	padding: 20px;
 }
 #user-msg-ulist li a{
 	display: block;
 }
+#user-msg-list{
+	box-shadow: 0 0 3px #908686;
+}
+#user-msg-list li{
+
+}
+
