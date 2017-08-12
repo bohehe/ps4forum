@@ -85,8 +85,114 @@
 }
 #user-msg-list{
 	box-shadow: 0 0 3px #908686;
+	height: 700px;
+	overflow: scroll;
 }
 #user-msg-list li{
 
 }
-
+#user-msg-list .ang{
+	z-index: 3;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-width: 6px 10px 6px 0;
+    border-style: solid;
+    border-color: transparent #f7f7f7 transparent transparent;
+    display: inline-block;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -9px;
+}
+#user-msg-list .ang2{
+	z-index: 2;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-width: 7px 11px 7px 0;
+    border-style: solid;
+    border-color: transparent #d4d4d4 transparent transparent;
+    display: inline-block;
+    position: absolute;
+    margin-top: 16px;
+    margin-left: -11px;
+}
+#user-msg-list .ang3{
+	z-index: 3;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-width: 6px 0px 6px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f7f7f7;
+    display: inline-block;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -5px;
+}
+#user-msg-list .ang4{
+	z-index: 2;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-width: 7px 0px 7px 11px;
+    border-style: solid;
+    border-color: transparent transparent transparent #d4d4d4;
+    display: inline-block;
+    position: absolute;
+    margin-top: 16px;
+    margin-left: -4px;
+}
+#user-msg-list img{
+	border-radius: 50%;
+}
+.user-msg-dialog-left{
+	margin-left: 10px;
+	position: relative;
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+.user-msg-dialog-left-face{
+	display: inline-block;
+	margin-right: 20px;
+}
+.user-msg-dialog-left-cont{
+	display: inline-block;
+    border: 1px solid #dedede;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    vertical-align: top;
+    line-height: 25px;
+    background-color: #f7f7f7;
+    border: 1px solid #d4d4d4;
+    max-width: 470px;
+    word-wrap: break-word;
+}
+.user-msg-dialog-right{
+	margin-right: 10px;
+	position: relative;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	text-align: right;
+}
+.user-msg-dialog-right-me{
+	display: inline-block;
+    border: 1px solid #dedede;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    vertical-align: top;
+    line-height: 25px;
+    background-color: #f7f7f7;
+    border: 1px solid #d4d4d4;
+    max-width: 470px;
+    word-wrap: break-word;
+    text-align: left;
+}
+.user-msg-dialog-right-face{
+	display: inline-block;
+	margin-left: 20px;
+}
