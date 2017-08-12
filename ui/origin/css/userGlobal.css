@@ -53,9 +53,9 @@
 }
 #user-tab ul{
     clear: both;
-    padding: 6px;
+    padding: 8px;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 25px 0;
     background-color: white;
     box-shadow: 0 0 3px rgba(0,0,0,.1);
 }
@@ -73,4 +73,13 @@
 #user-tab li a{
 	text-decoration: none;
     display: block;
+
+}
+#user-msg-ulist li{
+	border: none;
+	box-shadow: 0 0 3px rgba(0,0,0,.1);
+	padding: 20px;
+}
+#user-msg-ulist li a{
+	display: block;
 }
