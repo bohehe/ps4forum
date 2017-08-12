@@ -45,5 +45,32 @@
 .text-bronze{
 	color: #bf6a3a;
 }
-
-
+#user-tab{
+	width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+#user-tab ul{
+    clear: both;
+    padding: 6px;
+    overflow: hidden;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+#user-tab li{
+    float: left;
+    width: 14.2%;
+    padding: 8px 0 6px;
+    text-align: center;
+    line-height: 200%;
+    list-style-type: none;
+}
+#user-tab li.active{
+	background-color: #eceff1;
+}
+#user-tab li a{
+	text-decoration: none;
+    display: block;
+}
