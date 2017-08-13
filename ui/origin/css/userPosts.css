@@ -1,3 +1,6 @@
 .posts-lists-right{
 	margin-left: 20px;
 }
+.posts-lists-right button{
+	padding: 2px 4px;
+}
