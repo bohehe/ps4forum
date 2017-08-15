@@ -9,16 +9,10 @@
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/userGlobal.css">
     <link rel="stylesheet" type="text/css" href="../css/userSetting.css">
-    <!--pic list-->
-<!--     <link rel="stylesheet" type="text/css" href="../css/gridNav/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/gridNav/gridNavigation.css" /> -->
-    <!--pic list-->
-    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    // <script type="text/javascript" src="../js/gridNav/jquery.easing.1.3.js"></script>
-    // <script type="text/javascript" src="../js/gridNav/jquery.mousewheel.js"></script>
-    // <script type="text/javascript" src="../js/gridNav/jquery.gridnav.js"></script>
-    
+    <script src="../js/jquery.filterizr.js"></script>
+
 </head>
 
 <body>
@@ -92,60 +86,61 @@
                     <li class="active"><a href="javascript:;">设置</a></li>
                 </ul>
             </div>
-<!--             <div class="col-md-10 col-md-push-1">
+            <div class="col-md-10 col-md-push-2">
                 <div class="user-setting-bg">
                     <button type="button" class="btn btn-success">浅色背景</button>
                     <button type="button" class="btn btn-primary">深色背景</button>
                 </div>
-                <div id="tj_container" class="tj_container">
-                    <div class="tj_nav">
-                        <span id="tj_prev" class="tj_prev">Previous</span>
-                        <span id="tj_next" class="tj_next">Next</span>
-                    </div>
-                    <div class="tj_wrapper">
-                        <ul class="tj_gallery">
-                            <li>
-                                <a href="#"><img src="../images/gridNav/1.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/2.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/3.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/4.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/5.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/6.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/7.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/8.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/9.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/10.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/11.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/12.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/13.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/14.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/15.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/16.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/17.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/18.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/19.jpg" alt="image01" /></a>
-                                <a href="#"><img src="../images/gridNav/20.jpg" alt="image01" /></a>
-                            </li>
-                        </ul>
+            </div>
+            <div class="col-md-8 col-md-push-2" id="grid-wrap">
+                <div class="filtr-item" data-category="2">
+                    <img src="../images/grid/a1.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="1">
+                    <img src="../images/grid/a2.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="2">
+                    <img src="../images/grid/a3.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="1">
+                    <img src="../images/grid/a4.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="2">
+                    <img src="../images/grid/a5.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="3">
+                    <img src="../images/grid/a6.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="3">
+                    <img src="../images/grid/a7.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="1">
+                    <img src="../images/grid/a8.png" class="img-rounded">
+                </div>
+                <div class="filtr-item" data-category="3">
+                    <img src="../images/grid/a9.png" class="img-rounded">
+                </div>
+            </div>
+            <div class="col-md-10 col-md-push-2">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <textarea placeholder="介绍下自己吧..." class="form-control" rows="4"></textarea>
                     </div>
                 </div>
-            </div> -->
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label"></label>
+                    <div class="col-md-10" style="margin-top: 5px;">
+                        <button type="submit" class="btn btn-default">保存</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
-<script type="text/javascript">
-    // $(function() {
-
-    //     $('#tj_container').gridnav({
-    //         type: {
-    //             mode: 'disperse', // use def | fade | seqfade | updown | sequpdown | showhide | disperse | rows
-    //             speed: 500, // for fade, seqfade, updown, sequpdown, showhide, disperse, rows
-    //             easing: '', // for fade, seqfade, updown, sequpdown, showhide, disperse, rows   
-    //             factor: '', // for seqfade, sequpdown, rows
-    //             reverse: '' // for sequpdown
-    //         }
-    //     });
-
-    // });
+<script>
+    $(function() {
+        $('#grid-wrap').filterizr()
+    });
 </script>
 </html>

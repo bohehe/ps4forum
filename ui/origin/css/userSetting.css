@@ -1,0 +1,16 @@
+#grid-wrap {
+    max-width: 800px;
+    margin: 30px auto 35px;
+    font-size: 0;
+}
+
+.filtr-item {
+    display: inline-block;
+    width: 240px;
+    padding: 10px;
+}
+
+.filtr-item img {
+    width: 80%;
+    height: 120px;
+}
