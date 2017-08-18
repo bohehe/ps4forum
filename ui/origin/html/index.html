@@ -12,20 +12,12 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <style>
-    
+    .head-login-btn{
+        padding: 10px;
+    }
 </style>
 <script type="text/javascript">
-    $(function () {
-        var loginForm = '<form class="form-horizontal" role="form"><div class="form-group"><label class="col-md-2 control-label">昵称/邮箱</label><div class="col-md-10"><input class="form-control" id="focusedInput" type="text"  placeholder="请输入昵称或邮箱..."></div></div></form>'
 
-        $(".popover-options a.login-btn").popover({
-            html: true,
-            placement: 'auto left',
-            title: '<h3>登录</h3>',
-            container: 'body',
-            content: loginForm
-        })
-    })
 </script>
 <body>
     <nav id="navigator" class="navbar navbar-default" role="navigation">
@@ -70,18 +62,62 @@
                             </ul>
                         </li>
                    </div>
-                    <li class="popover-options">
-                        <a href="#" type="button" class="btn login-btn" data-toggle="popover">
-                            登录
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="dropdown-toggle">注册</a>
+                    <li class="head-login-btn">
+                        <button class="btn btn-info btn-md" data-toggle="modal" data-target="#login-form">登录&nbsp;|&nbsp;注册</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="login-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="login-form-title">
+                        登录
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox">请记住我
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-default">登录</button>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                              还没有账号？<a href="#">立即注册</a>
+                          </div>
+                      </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
     <div id="banner-index" class="carousel slide">
         <!-- 轮播（Carousel）指标 -->
         <ol class="carousel-indicators">
