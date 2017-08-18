@@ -12,13 +12,19 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <style>
-    .head-login-btn{
-        padding: 10px;
-    }
+.head-login-btn {
+    padding: 10px;
+}
 </style>
-<script type="text/javascript">
-
+<script>
+   $(function() {
+        $('#to-register').bind('click', function(event) {
+            $('#login-form').modal('toggle')
+            $('#register-form').modal('toggle')
+        })
+   })
 </script>
+
 <body>
     <nav id="navigator" class="navbar navbar-default" role="navigation">
         <div class="container" style="padding: 0 60px;">
@@ -31,7 +37,8 @@
                     <li class="dropdown">
                         <a href="postsList.html" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="postsList.html?type=-1">全部</a></li><li><a href="postsList.html?type=1">攻略</a></li>
+                            <li><a href="postsList.html?type=-1">全部</a></li>
+                            <li><a href="postsList.html?type=1">攻略</a></li>
                             <li><a href="postsList.html?type=2">吐槽</a></li>
                             <li><a href="postsList.html?type=3">心得</a></li>
                         </ul>
@@ -46,7 +53,7 @@
                     <button type="submit" class="btn btn-info">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                   <div class="hidden">
+                    <div class="hidden">
                         <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -61,7 +68,7 @@
                                 <li><a href="userSetting.html">设置</a></li>
                             </ul>
                         </li>
-                   </div>
+                    </div>
                     <li class="head-login-btn">
                         <button class="btn btn-info btn-md" data-toggle="modal" data-target="#login-form">登录&nbsp;|&nbsp;注册</button>
                     </li>
@@ -82,41 +89,86 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" role="form">
-                      <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label">邮箱</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                            </div>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="lastname" class="col-sm-2 control-label">密码</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                            </div>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox">请记住我
-                            </label>
-                          </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">请记住我
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-default">登录</button>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">登录</button>
+                            </div>
                         </div>
-                      </div>
-                      <div class="form-group">
-                          <div class="col-sm-offset-2 col-sm-10">
-                              还没有账号？<a href="#">立即注册</a>
-                          </div>
-                      </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                还没有账号？<a id="to-register" href="javascript:;">立即注册</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal -->
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="register-form" tabindex="-1" role="dialog" aria-labelledby="register-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="register-form-title">
+                        注册
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">重复密码</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
     </div>
     <div id="banner-index" class="carousel slide">
         <!-- 轮播（Carousel）指标 -->
@@ -312,7 +364,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
