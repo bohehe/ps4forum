@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人中心--我的关注</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.slider.css" />
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/userGlobal.css">
     <link rel="stylesheet" type="text/css" href="../css/userFollow.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slider.min.js"></script>
+    <script src="../js/global.js"></script>
     
 </head>
 
@@ -26,7 +29,8 @@
                     <li class="dropdown">
                         <a href="postsList.html" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="postsList.html?type=-1">全部</a></li><li><a href="postsList.html?type=1">攻略</a></li>
+                            <li><a href="postsList.html?type=-1">全部</a></li>
+                            <li><a href="postsList.html?type=1">攻略</a></li>
                             <li><a href="postsList.html?type=2">吐槽</a></li>
                             <li><a href="postsList.html?type=3">心得</a></li>
                         </ul>
@@ -41,25 +45,137 @@
                     <button type="submit" class="btn btn-info">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            我的 <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            
-                            <li><a href="userFollow.html">关注<span class="badge pull-right">2</span></a></li>
-                            <li><a href="userReply.html">回复<span class="badge pull-right">4</span></a></li>
-                            <li><a href="userMsg.html">留言<span class="badge pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="userCollection.html">收藏</a></li>
-                            <li><a href="userSetting.html">设置</a></li>
-                        </ul>
+                    <div class="hidden">
+                        <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                我的 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="userFollow.html">关注<span class="badge pull-right">2</span></a></li>
+                                <li><a href="userReply.html">回复<span class="badge pull-right">4</span></a></li>
+                                <li><a href="userMsg.html">留言<span class="badge pull-right"></span></a></li>
+                                <li class="divider"></li>
+                                <li><a href="userCollection.html">收藏</a></li>
+                                <li><a href="userSetting.html">设置</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <li class="head-login-btn">
+                        <button class="btn btn-info btn-md" data-toggle="modal" data-target="#login-form">登录&nbsp;|&nbsp;注册</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="login-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="login-form-title">
+                        登录
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-login" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">请记住我
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">登录</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                还没有账号？<a id="to-register" href="javascript:;">立即注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="register-form" tabindex="-1" role="dialog" aria-labelledby="register-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="register-form-title">
+                        注册
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入有效的邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">重复密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请再次输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-register" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
     <div class="user-nav" style="background:#000 url('../images/b5.jpg') no-repeat center; background-size:cover;">
         <div class="user-nav-head">
             <img width="150" height="150" src="../images/avator.png" alt="">

@@ -12,37 +12,8 @@
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.slider.min.js"></script>
+    <script src="../js/global.js"></script>
 </head>
-<style>
-.head-login-btn {
-    padding: 10px;
-}
-</style>
-<script>
-   $(function() {
-        $('#to-register').bind('click', function(event) {
-            $('#login-form').modal('toggle')
-            setTimeout(function(){
-                $('#register-form').modal('toggle')
-            }, 500)
-        })
-
-        $("#vcode-login").slider({
-            width: 270,
-            height: 35,
-            successMsg: "验证通过了哦"
-            // callback: function(result) {
-            //     $("#vcode-login").text(result)
-            // }
-        })
-
-        $("#vcode-register").slider({
-            width: 270,
-            height: 35,
-            successMsg: "验证通过了哦"
-        })
-   })
-</script>
 
 <body>
     <nav id="navigator" class="navbar navbar-default" role="navigation">
