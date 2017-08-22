@@ -1,0 +1,43 @@
+.detail-left-user{
+    text-align: center;
+    background-color: #fff;
+    padding: 35px;
+}
+.news-head{
+	margin-bottom: 0;
+}
+.news-head h2{
+	text-align: center;
+}
+.news-head b{
+	color: #b94a48;
+}
+.content-head-info{
+	background-color: #F4F8FA;
+	padding: 4px;
+	margin: 0 30px;
+}
+.content-head-info span{
+	padding-right: 20px;
+}
+.text-content{
+	padding: 30px;
+}
+.text-content caption{
+	color: #b94a48;
+	background-color: #FAF8F0;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.text-content .article{
+	line-height: 180%;
+    overflow: hidden;
+}
+.trade-detail-imgs{
+	overflow: hidden;
+	text-align: center;
+}
+.trade-detail-imgs img{
+	max-width: 100%;
+    margin: 10px 0;
+}

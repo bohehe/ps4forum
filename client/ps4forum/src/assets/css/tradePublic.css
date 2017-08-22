@@ -1,0 +1,30 @@
+.posts-lists h4 span{
+	margin-right: 10px;
+}
+.posts-lists .list-group-item{
+	margin-bottom: 0px;
+	border: none;
+    border-bottom: 1px dotted #ccc;
+}
+.posts-lists .list-group-item:first-child{
+	border-top: 1px dotted #ccc;
+}
+.posts-list-hover{
+	background-color: #F5F5F5;
+}
+.posts-lists-right{
+	text-align: center;
+}
+.posts-lists-right span{
+	padding-left: 32px;
+}
+.trade-public-form{
+	padding: 30px;
+}
+.trade-public-warning{
+	color: #b94a48;
+	background-color: #FAF8F0;
+	padding: 10px 10px 10px 70px;
+	line-height: 180%;
+	margin-bottom: 25px;
+}

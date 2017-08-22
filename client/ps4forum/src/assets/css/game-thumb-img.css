@@ -1,0 +1,49 @@
+/*----------------------------
+	Thumbnails
+-----------------------------*/
+
+
+/*img-gather*/
+
+.img-gather {
+    margin-top: 8px;
+    height: 100px;
+}
+
+.img-gather a {
+    float: left;
+    width: 145px;
+    height: 100px;
+    margin: 5px;
+}
+
+#thumbs {
+    max-width: 620px;
+    /* margin: 10px auto; */
+    text-align: center;
+}
+
+#thumbs a {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/*----------------------------
+	Media Queries
+-----------------------------*/
+
+@media screen and (max-width: 960px) {
+    #thumbs {
+        width: auto;
+    }
+
+    #bsaHolder {
+        display: none;
+    }
+}

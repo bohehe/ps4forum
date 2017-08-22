@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帖子列表</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.slider.css" />
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/postsList.css">
+    <link rel="stylesheet" type="text/css" href="../css/game-thumb-img.css">
+    <link rel="stylesheet" type="text/css" href="../css/touchTouch.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/touchTouch.jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slider.min.js"></script>
+    <script src="../js/global.js"></script>
+    
+</head>
+
+<body>
+    <nav id="navigator" class="navbar navbar-default" role="navigation">
+        <div class="container" style="padding: 0 60px;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">logo图</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="newsList.html">新闻</a></li>
+                    <li class="dropdown">
+                        <a href="postsList.html" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="postsList.html?type=-1">全部</a></li>
+                            <li><a href="postsList.html?type=1">攻略</a></li>
+                            <li><a href="postsList.html?type=2">吐槽</a></li>
+                            <li><a href="postsList.html?type=3">心得</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gameList.html">游戏</a></li>
+                    <li><a href="tradeList.html">买卖</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search" style="margin-left: 30px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="站内搜索...">
+                    </div>
+                    <button type="submit" class="btn btn-info">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <div class="hidden">
+                        <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                我的 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="userFollow.html">关注<span class="badge pull-right">2</span></a></li>
+                                <li><a href="userReply.html">回复<span class="badge pull-right">4</span></a></li>
+                                <li><a href="userMsg.html">留言<span class="badge pull-right"></span></a></li>
+                                <li class="divider"></li>
+                                <li><a href="userCollection.html">收藏</a></li>
+                                <li><a href="userSetting.html">设置</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <li class="head-login-btn">
+                        <button class="btn btn-info btn-md" data-toggle="modal" data-target="#login-form">登录&nbsp;|&nbsp;注册</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="login-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="login-form-title">
+                        登录
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-login" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">请记住我
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">登录</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                还没有账号？<a id="to-register" href="javascript:;">立即注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="register-form" tabindex="-1" role="dialog" aria-labelledby="register-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="register-form-title">
+                        注册
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入有效的邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">重复密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请再次输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-register" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="container" id="main-body" style="background-color: #fff;max-width: 970px;">
+        <div class="row">
+            <form class="bs-example bs-example-form" role="form" style="margin-top: 35px;">
+                <div class="col-md-6 col-md-push-3">
+                    <div class="input-group" style="float: left;">
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>攻略</option>
+                            <option>吐槽</option>
+                            <option>心得</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜帖子...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <div class="col-md-12 posts-lists" style="margin-top: 30px;">
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading">
+                        <span class="label label-primary">置顶</span>
+                        <span>
+                            <a href="#">公告/封号查询/申诉</a>
+                        </span>
+                    </h4>
+                </div>
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading">
+                        <span class="label label-primary">置顶</span><span class="label label-danger">精</span>
+                        <span>
+                            <a href="#">发帖和回复须知</a>
+                        </span>
+                    </h4>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                            <div class="clearfix img-gather" id="thumbs">
+                                <a href="../images/b1.jpg" style="background-image:url(../images/b1.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b2.jpg" style="background-image:url(../images/b2.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b3.jpg" style="background-image:url(../images/b3.jpg)" title="血源诅咒"></a>
+                                <a href="../images/b6.jpg" style="background-image:url(../images/b6.jpg)" title="血源诅咒"></a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>33分钟前</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>35分钟前</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>2017-06-30</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>2017-06-30</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>2017-06-30</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row" style="padding: 10px 15px;">
+                        <div class="col-md-9" style="padding: 0;margin: 0;">
+                            <h4 class="list-group-item-heading">
+                                <a href="postsDetail.html">一周目被宇宙之女打成象拔蚌，求大佬带带~~</a>
+                            </h4>
+                            <p class="list-group-item-text">
+                                萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带 萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="posts-lists-right">
+                                <a href="#">
+                                    <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                                </a>
+                                <a href="#">卑鄙异乡人</a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <a href="#"><span>回复（13）</span></a>
+                            </p>
+                            <p class="posts-lists-right">
+                                <span>2017-06-30</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $('#thumbs a').touchTouch()
+
+    $('.posts-lists .list-group-item').hover(function() {
+        $(this).addClass('posts-list-hover')
+    }, function() {
+        $(this).removeClass('posts-list-hover')
+    });
+</script>
+</html>

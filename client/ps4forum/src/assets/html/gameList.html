@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏列表</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.slider.css" />
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/gameList.css">
+    <link rel="stylesheet" type="text/css" href="../css/star-rating.min.css"/>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/star-rating.min.js"></script>
+    <script src="../js/jquery.slider.min.js"></script>
+    <script src="../js/global.js"></script>
+</head>
+
+<body>
+    <nav id="navigator" class="navbar navbar-default" role="navigation">
+        <div class="container" style="padding: 0 60px;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">logo图</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="newsList.html">新闻</a></li>
+                    <li class="dropdown">
+                        <a href="postsList.html" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="postsList.html?type=-1">全部</a></li>
+                            <li><a href="postsList.html?type=1">攻略</a></li>
+                            <li><a href="postsList.html?type=2">吐槽</a></li>
+                            <li><a href="postsList.html?type=3">心得</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gameList.html">游戏</a></li>
+                    <li><a href="tradeList.html">买卖</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search" style="margin-left: 30px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="站内搜索...">
+                    </div>
+                    <button type="submit" class="btn btn-info">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <div class="hidden">
+                        <img width="34px" height="34px" class="ava" src="../images/avator.png" alt="">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                我的 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="userFollow.html">关注<span class="badge pull-right">2</span></a></li>
+                                <li><a href="userReply.html">回复<span class="badge pull-right">4</span></a></li>
+                                <li><a href="userMsg.html">留言<span class="badge pull-right"></span></a></li>
+                                <li class="divider"></li>
+                                <li><a href="userCollection.html">收藏</a></li>
+                                <li><a href="userSetting.html">设置</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <li class="head-login-btn">
+                        <button class="btn btn-info btn-md" data-toggle="modal" data-target="#login-form">登录&nbsp;|&nbsp;注册</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="login-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="login-form-title">
+                        登录
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-login" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">请记住我
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">登录</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                还没有账号？<a id="to-register" href="javascript:;">立即注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="register-form" tabindex="-1" role="dialog" aria-labelledby="register-form-title" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title text-center" id="register-form-title">
+                        注册
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">邮箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入有效的邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">重复密码</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="lastname" placeholder="请再次输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-3 control-label">拖动验证</label>
+                            <div class="col-md-9">
+                                <div id="vcode-register" class="slider"></div>
+                                <!-- <div class="result">验证结果：<span id="result1"></span></div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-default">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="container" id="main-body">
+        <div style="padding: 50px 100px 10px;">
+            <form class="bs-example bs-example-form" role="form">
+                <div class="row">
+                    <div class="col-md-6 col-md-push-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                           搜游戏
+                        </button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="bs-example bs-example-form" role="form">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-3 search-game-btn" style="margin: 20px 0;">
+                        <span class="label label-default">发售时间</span>
+                        <button type="button" class="btn btn-default btn-sm">全部</button>
+                        <button type="button" class="btn btn-default btn-sm">本月</button>
+                        <button type="button" class="btn btn-info btn-sm">本季度</button>
+                        <button type="button" class="btn btn-default btn-sm">2017</button>
+                        <button type="button" class="btn btn-default btn-sm">2016</button>
+                        <button type="button" class="btn btn-info btn-sm">已发售</button>
+                        <button type="button" class="btn btn-default btn-sm">未发售</button>
+                    </div>
+                </div>
+            </form>
+            <form class="bs-example bs-example-form" role="form">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-3 search-game-btn">
+                        <span class="label label-default">游戏语言</span>
+                        <button type="button" class="btn btn-default btn-sm">全部</button>
+                        <button type="button" class="btn btn-info btn-sm">简体中文</button>
+                        <button type="button" class="btn btn-default btn-sm">繁体中文</button>
+                        <button type="button" class="btn btn-default btn-sm">英文</button>
+                        <button type="button" class="btn btn-default btn-sm">日文</button>
+                    </div>
+                </div>
+            </form>
+            <form class="bs-example bs-example-form" role="form">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-3 search-game-btn">
+                        <span class="label label-default">游戏类型</span>
+                        <button type="button" class="btn btn-default btn-sm">全部</button>
+                        <button type="button" class="btn btn-info btn-sm">RPG</button>
+                        <button type="button" class="btn btn-info btn-sm">动作&冒险</button>
+                        <button type="button" class="btn btn-default btn-sm">运动&模拟</button>
+                        <button type="button" class="btn btn-default btn-sm">射击</button>
+                        <button type="button" class="btn btn-default btn-sm">策略</button>
+                        <button type="button" class="btn btn-default btn-sm">其他</button>
+                    </div>
+                </div>
+            </form>
+            <form role="form">
+                <div class="row">
+                    <div class="form-group col-md-2 col-md-push-3">
+                        <label for="name">发布时间排序</label>
+                        <select class="form-control">
+                            <option>发布越早</option>
+                            <option>发布越晚</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-md-push-3">
+                        <label for="name">评分</label>
+                        <select class="form-control">
+                            <option>全部</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div id="gamelist" class="col-md-8 col-md-push-2 gamelist">
+                <div class="media every-game">
+                    <a class="media-left pull-left" href="gameDetail.html">
+                        <img class="media-object" src="../images/game1.jpg" alt="血源诅咒">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">血源诅咒</h4>
+                        <input value="5" type="number" class="rating input-stars" min=0 max=5 step=1 data-size="xs">
+                        <div class="text-muted">
+                            血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。天空与宇宙是一个整体。你竟敢直视于我！肥胖者的臭气。是潜行攻击的时候了。血源诅咒。源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。天空与宇宙是一个整体。你竟敢直视于我！肥胖者的臭气。是潜行攻击的时候了。血源诅咒。
+                        </div>
+                        <div class="game-list-attr">
+                            <p>
+                                <span><b>系列：</b>血源诅咒</span>
+                                <span><b>开发商：</b>From Software Inc</span>
+                            </p>
+                            <p>
+                                <span><b>发售：</b>2015-03-24</span>
+                                <span><b>类型：</b>RPG&nbsp;&nbsp;动作冒险</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media every-game">
+                    <a class="media-left pull-left" href="gameDetail.html">
+                        <img class="media-object" src="../images/game2.jpg" alt="血源诅咒">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">血源诅咒</h4>
+                        <input value="4" type="number" class="rating input-stars" min=0 max=5 step=1 data-size="xs">
+                        <div class="text-muted">
+                            血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。天空与宇宙是一个整体。你竟敢直视于我！肥胖者的臭气。是潜行攻击的时候了。血源诅咒。
+                        </div>
+                        <div class="game-list-attr">
+                            <p>
+                                <span><b>系列：</b>血源诅咒</span>
+                                <span><b>开发商：</b>From Software Inc</span>
+                            </p>
+                            <p>
+                                <span><b>发售：</b>2015-03-24</span>
+                                <span><b>类型：</b>RPG&nbsp;&nbsp;动作冒险</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media every-game">
+                    <a class="media-left pull-left" href="gameDetail.html">
+                        <img class="media-object" src="../images/game3.jpg" alt="血源诅咒">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">血源诅咒</h4>
+                        <input value="4" type="number" class="rating input-stars" min=0 max=5 step=1 data-size="xs">
+                        <div class="text-muted">
+                            血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。天空与宇宙是一个整体。你竟敢直视于我！肥胖者的臭气。是潜行攻击的时候了。血源诅咒。
+                        </div>
+                        <div class="game-list-attr">
+                            <p>
+                                <span><b>系列：</b>血源诅咒</span>
+                                <span><b>开发商：</b>From Software Inc</span>
+                            </p>
+                            <p>
+                                <span><b>发售：</b>2015-03-24</span>
+                                <span><b>类型：</b>RPG&nbsp;&nbsp;动作冒险</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media every-game">
+                    <a class="media-left pull-left" href="gameDetail.html">
+                        <img class="media-object" src="../images/game4.jpg" alt="血源诅咒">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">血源诅咒</h4>
+                        <input value="4" type="number" class="rating input-stars" min=0 max=5 step=1 data-size="xs">
+                        <div class="text-muted">
+                            血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。血源诅咒。天空与宇宙是一个整体。你竟敢直视于我！肥胖者的臭气。是潜行攻击的时候了。血源诅咒。
+                        </div>
+                        <div class="game-list-attr">
+                            <p>
+                                <span><b>系列：</b>血源诅咒</span>
+                                <span><b>开发商：</b>From Software Inc</span>
+                            </p>
+                            <p>
+                                <span><b>发售：</b>2015-03-24</span>
+                                <span><b>类型：</b>RPG&nbsp;&nbsp;动作冒险</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $('.input-stars').rating({
+        showClear: false,
+        showCaption: false,
+        displayOnly: true
+    })
+</script>
+
+</html>

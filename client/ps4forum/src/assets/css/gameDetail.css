@@ -1,0 +1,47 @@
+#game-info-list-left{
+	padding: 0;
+	height: 500px;
+	background-color: #fff;
+}
+#game-info-list-right{
+	height: 820px;
+	background-color: #fff;
+}
+#game-info-list-left h4{
+	padding: 10px 15px;
+	margin: 0;
+	background-color: #dbe3ea;
+}
+#game-info-list-left .list-group-item{
+	border: none;
+}
+#game-comment{
+	max-height: 1200px;
+	background-color: #fff;
+	margin-top: 20px;
+}
+.game-info-block{
+	margin-bottom: 40px;	
+}
+.game-info-title{
+	margin: 20px 0;
+	background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #0098ee;
+    border-left: 3px solid #0098ee;
+    font: 400 24px/26px "Microsoft Yahei";
+}
+.game-info-block .rating-container{
+	float: left;
+	padding-top: 4px;
+	margin-right: 10px;
+}
+.star-text{
+	line-height: 30px;
+	margin: 0;
+}
+.game-star-score{
+	float: left;
+	margin: 0;
+}
