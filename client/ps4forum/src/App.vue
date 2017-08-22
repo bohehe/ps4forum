@@ -10,9 +10,9 @@
 import '@/assets/js/jquery.slider.min.js'
 import '@/assets/js/global.js'
 
-import psNav from '@/components/ps-nav'
-import psLogin from '@/components/ps-login'
-import psRegister from '@/components/ps-register'
+import psNav from '@/components/head/ps-nav'
+import psLogin from '@/components/head/ps-login'
+import psRegister from '@/components/head/ps-register'
 
 export default {
   name: 'app',

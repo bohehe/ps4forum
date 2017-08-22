@@ -27,7 +27,7 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <div class="hidden">
-                    <img width="34px" height="34px" class="ava" src="../assets/images/avator.png" alt="">
+                    <img width="34px" height="34px" class="ava" src="../../assets/images/avator.png" alt="">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             我的 <b class="caret"></b>
