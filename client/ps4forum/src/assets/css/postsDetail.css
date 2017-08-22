@@ -1,0 +1,63 @@
+.post-detail-title{
+	padding: 10px 20px;
+	border: 1px solid #E1E4E6;
+}
+.post-detail-title span{
+	margin-top: -5px;
+}
+#posts-detail-list li{
+	list-style-type: none;
+	border-bottom: 1px solid #E1E4E6;
+	background-color: rgb(251, 251, 253);
+}
+.posts-detail-left{
+	margin-top: 20px;
+}
+.posts-detail-right{
+	padding: 20px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.posts-detail-right .posts-content{
+	line-height: 24px;
+	margin: 10px 0;
+}
+.posts-detail-right img{
+	max-width: 100%;
+	margin: 10px 0;
+}
+.posts-detail-right .posts-content-img{
+	text-align: center;
+}
+.posts-detail-right .posts-content-info{
+	color: #999;
+}
+.posts-detail-right .posts-content-reply{
+	background-color: rgb(251, 251, 253);
+	clear: both;
+}
+.posts-detail-right .posts-content-reply-wrap{
+	padding: 0 10px;
+	margin-top: 50px;
+}
+.posts-content-reply-wrap li{
+    zoom: 1;
+}
+.posts-content-reply-cont{
+    margin-left: 45px;
+    zoom: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    position: relative;
+}
+.posts-content-reply-cont-r{
+	position: relative;
+	left: 0;
+	top: -35px;
+}
+.posts-content-reply-cont-p{
+    float: right;
+	position: relative;
+	right: 0;
+	top: -20px;
+}

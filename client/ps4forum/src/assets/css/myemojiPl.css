@@ -1,0 +1,165 @@
+#game-comment .Main {
+    margin: 0 auto 30px;
+}
+
+#game-comment .Input_Box {
+    width: 100%;
+    min-height: 160px;
+    border: 1px solid #ccc;
+    transition: border linear .2s, box-shadow linear .5s;
+    -moz-transition: border linear .2s, -moz-box-shadow linear .5s;
+    -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* overflow: hidden; */
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    position: relative;
+}
+
+#game-comment .Input_text {
+    min-height: 111px;
+    padding: 5px;
+    margin: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    resize: none;
+    font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#game-comment .Input_Foot {
+    width: 100%;
+    height: 35px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    bottom: 0;
+}
+
+#game-comment .imgBtn {
+    float: left;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 0 -13px;
+    height: 18px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#game-comment .imgBtn:active {
+    margin-top: 9px;
+}
+
+#game-comment .imgBtn:hover {
+    background-position: 0 -31px
+}
+
+#game-comment .postBtn {
+    float: right;
+    font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+    color: #808080;
+    padding: 9px 20px 7px 20px;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+    -moz-border-radius: 0 0 5px 0;
+    -webkit-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+
+#game-comment .postBtn:hover {
+    color: #333;
+    background-color: #efefef;
+}
+
+#game-comment .postBtn:active {
+    padding: 10px 20px 6px 20px;
+}
+
+#game-comment .faceDiv {
+    width: 100%;
+    border: 1px solid gray;
+    position: absolute;
+    left: 0px;
+    top: -200px;
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#game-comment .faceDiv> .emoji_container >section >._img img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    float: left;
+    max-width: 48px;
+    max-height: 48px;
+    margin-left: -1px;
+    margin-top: -1px;
+    position: relative;
+    cursor: pointer;
+}
+
+#game-comment .faceDiv>img:hover {
+    background-color: #efefef;
+}
+
+#game-comment .faceDiv>img:active {
+    padding: 4px 3px 2px 3px;
+}
+
+#game-comment .emoji_tab {
+    position: relative;
+    border-top: 1px solid gray;
+    height: 2em;
+    line-height: 2em;
+    white-space: nowrap;
+    overflow-x: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#game-comment .emoji_tab a {
+    display: inline-block;
+    text-decoration: none;
+    height: 1em;
+    line-height: 1em;
+    padding: .2em .5em;
+    background-color: gray;
+    box-shadow: 1px 1px 3px gray;
+    border-radius: 5px;
+    margin: 0 .2em;
+}
+
+#game-comment .emoji_container {
+    height: 200px;
+    padding: 1em;
+    overflow: auto;
+}
+
+#game-comment .emoji_container section {
+    display: none;
+}
+
+#game-comment ._img {
+    width:
+}
+
+#game-comment .active {
+    background-color: black;
+    color: white;
+}

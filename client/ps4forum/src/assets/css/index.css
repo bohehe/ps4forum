@@ -1,0 +1,41 @@
+#banner-index {
+    max-width: 1170px;
+    max-height: 360px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#container-body{
+
+}
+
+#container-right aside {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+#container-right aside ul {
+    margin: 0;
+    padding: 0;
+}
+
+#container-right aside li {
+    list-style-type: none;
+    padding: 3px;
+}
+
+#container-right {
+    max-height: 800px;
+}
+#container-left{
+	padding: 0;
+}
+#container-left-content {
+    height: 1980px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#container-left-content .list-group a {
+    border: none;
+}

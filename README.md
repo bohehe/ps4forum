@@ -1,3 +1,12 @@
 # ps4forum
-a forum for ps4 players
-based on laravel 5.4 and bootstrap3
+> based on laravel 5.4 & Bootstrap3 & Vue
+
+## for origin html pages
+> browse ./ui/html/index.html
+
+## Build Setup
+```
+cd ./client/ps4forum
+npm install
+npm run dev
+```

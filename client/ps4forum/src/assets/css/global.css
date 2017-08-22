@@ -1,0 +1,25 @@
+body {
+    background-color: #efefef;
+}
+#navigator {
+    background-color: #e4e4e4;
+    margin-bottom: 30px;
+}
+#navigator .container{
+	width: 1080px;
+}
+#navigator ul.dropdown-menu {
+    min-width: 110px;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.ava {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-top: 8px;
+}
+.head-login-btn {
+    padding: 10px;
+}
