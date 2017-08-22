@@ -3,6 +3,7 @@
 </template>
 
 <script>
+
 import psNav from '@/components/ps-nav'
 
 export default {
@@ -14,5 +15,6 @@ export default {
 </script>
 
 <style>
+  @import './assets/css/bootstrap.min.css';
   @import './assets/css/global.css';
 </style>
