@@ -1,10 +1,12 @@
 # ps4forum
-based on laravel 5.4 & bootstrap3 & vueJS
+> based on laravel 5.4 & Bootstrap3 & Vue
 
 ## for origin html pages
-### browse ./ui/html/index.html
+> browse ./ui/html/index.html
 
-## run project in Vue
-### cd ./client/ps4forum
-### npm install
-### npm run dev
+## Build Setup
+```
+cd ./client/ps4forum
+npm install
+npm run dev
+```
