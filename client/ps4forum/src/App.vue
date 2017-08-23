@@ -1,25 +1,17 @@
 <template>
-  <div>
-    <ps-nav></ps-nav>
-    <ps-login></ps-login>
-    <ps-register></ps-register>
-  </div>
+  <ps-head></ps-head>
 </template>
 
 <script>
 import '@/assets/js/jquery.slider.min.js'
 import '@/assets/js/global.js'
 
-import psNav from '@/components/head/ps-nav'
-import psLogin from '@/components/head/ps-login'
-import psRegister from '@/components/head/ps-register'
+import psHead from '@/components/ps-head'
 
 export default {
   name: 'app',
   components: {
-    psNav,
-    psLogin,
-    psRegister
+    psHead
   }
 }
 
