@@ -1,5 +1,8 @@
 <template>
-  <ps-head></ps-head>
+  <div>
+    <ps-head></ps-head>
+    <ps-body></ps-body>
+  </div>
 </template>
 
 <script>
@@ -7,11 +10,13 @@ import '@/assets/js/jquery.slider.min.js'
 import '@/assets/js/global.js'
 
 import psHead from '@/components/ps-head'
+import psBody from '@/components/ps-body'
 
 export default {
   name: 'app',
   components: {
-    psHead
+    psHead,
+    psBody
   }
 }
 
