@@ -176,11 +176,16 @@
 </template>
 <script>
 	import psSlider from '@/components/common/ps-slider'
+	import { getIndexBannerList } from '@/api/index'
 
 	export default {
 		name: 'ps-index',
 		components: {
 			psSlider
+		},
+
+		created(){
+			getIndexBannerList(this.API_URL, [])
 		}
 	}
 </script>
