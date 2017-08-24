@@ -10,10 +10,10 @@
                   萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
               </p>
               <div class="clearfix img-gather" id="thumbs">
-                  <a href="../../assets/images/b1.jpg" :style="{'background-image': 'url(../../assets/images/b1.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b2.jpg" :style="{'background-image': 'url(../../assets/images/b2.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b3.jpg" :style="{'background-image': 'url(../../assets/images/b3.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b6.jpg" :style="{'background-image': 'url(../../assets/images/b6.jpg)'}" title="血源诅咒"></a>
+                  <a href="../../assets/images/b1.jpg" :style="{'background-image': 'url(./../../assets/images/b1.jpg)'}" title="血源诅咒"></a>
+                  <a href="../../assets/images/b2.jpg" :style="{'background-image': 'url(./../../assets/images/b2.jpg)'}" title="血源诅咒"></a>
+                  <a href="../../assets/images/b3.jpg" :style="{'background-image': 'url(./../../assets/images/b3.jpg)'}" title="血源诅咒"></a>
+                  <a href="../../assets/images/b6.jpg" :style="{'background-image': 'url(./../../assets/images/b6.jpg)'}" title="血源诅咒"></a>
               </div>
           </div>
           <div class="col-md-3">
@@ -168,4 +168,11 @@
 	export default {
 		name: 'ps-posts-list'
 	}
+
+	$('#thumbs a').touchTouch()
+  $('.posts-lists .list-group-item').hover(function() {
+      $(this).addClass('posts-list-hover')
+  }, function() {
+      $(this).removeClass('posts-list-hover')
+  })
 </script>

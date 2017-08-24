@@ -37,12 +37,6 @@
 		}
 	}
 
-  $('#thumbs a').touchTouch()
-  $('.posts-lists .list-group-item').hover(function() {
-      $(this).addClass('posts-list-hover')
-  }, function() {
-      $(this).removeClass('posts-list-hover')
-  });
 </script>
 <style>
 	@import '../assets/css/touchTouch.css';
