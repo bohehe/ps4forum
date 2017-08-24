@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return [];
 });
+
+Route::group(['prefix' => 'api'], function () {
+	Route::get('/indexBannerList', 'Home\IndexController@getBannerList');
+	Route::get('/indexPostsList', 'Home\IndexController@getPostsList');
+	Route::get('/indexHotGameList', 'Home\IndexController@getHotGameList');
+	Route::get('/indexHotNewsList', 'Home\IndexController@getHotNewsList');
+	Route::get('/indexHotPostsList', 'Home\IndexController@getHotPostsList');
+});
+
+
