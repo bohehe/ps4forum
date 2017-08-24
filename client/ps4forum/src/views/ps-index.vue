@@ -185,7 +185,7 @@
 		},
 
 		created(){
-			getIndexBannerList(this.API_URL, [])
+			getIndexBannerList(this.API_URL + '/indexBannerList', [])
 		}
 	}
 </script>
