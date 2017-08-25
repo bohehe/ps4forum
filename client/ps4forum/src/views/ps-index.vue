@@ -134,7 +134,7 @@
 		},
 
 		created () {
-			//
+			//左侧文章列表数据
 			getIndexPostsList(this.API_URL + '/indexPostsList', []).then((res => {
 				console.log(res)
       	this.postsList = res
