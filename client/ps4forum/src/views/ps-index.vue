@@ -16,7 +16,6 @@
 	                              【置顶】xxxxxxxxxx
 	                          </h4>
 	                      </a>
-
 	                      <router-link v-for="(posts, idx) in postsList" :key="posts.id" :to="{ name: 'news-detail', params: { id: posts.id } }" class="list-group-item">
 	                          <h4 class="list-group-item-heading">
 	                              {{ posts.title }}
@@ -26,7 +25,6 @@
 	                          </p>
 	                          <img v-for="(img, imgIdx) in posts.imgs" width="230px" height="135px" :src="img">
 	                      </router-link>
-	                      
 	                  </div>
 	                  <ul class="pagination">
 	                      <li><a href="#">&laquo;</a></li>
@@ -51,46 +49,16 @@
 	              <aside class="col-md-12 col-md-push-1">
 	                  <h4>热点新闻</h4>
 	                  <ul>
-	                      <li>
-	                          <a href="newsDetail.html">BloodBorne2</a>
-	                      </li>
-	                      <li>
-	                          <a href="newsDetail.html">巫师4</a>
-	                      </li>
-	                      <li>
-	                          <a href="newsDetail.html">生化危机8</a>
-	                      </li>
-	                      <li>
-	                          <a href="newsDetail.html">尼尔：机械纪元</a>
-	                      </li>
-	                      <li>
-	                          <a href="newsDetail.html">仁王</a>
-	                      </li>
-	                      <li>
-	                          <a href="newsDetail.html">神秘海域</a>
+	                      <li v-for="(news, idx) in hotNewsList" :key="news.id">
+	                          <router-link :to="{ name: 'news-detail', params: {id: news.id} }">{{ news.title }}</router-link>
 	                      </li>
 	                  </ul>
 	              </aside>
 	              <aside class="col-md-12 col-md-push-1">
 	                  <h4>热门帖子</h4>
 	                  <ul>
-	                      <li>
-	                          <a href="postsDetail.html">BloodBorne2</a>
-	                      </li>
-	                      <li>
-	                          <a href="postsDetail.html">巫师4</a>
-	                      </li>
-	                      <li>
-	                          <a href="postsDetail.html">生化危机8</a>
-	                      </li>
-	                      <li>
-	                          <a href="postsDetail.html">尼尔：机械纪元</a>
-	                      </li>
-	                      <li>
-	                          <a href="postsDetail.html">仁王</a>
-	                      </li>
-	                      <li>
-	                          <a href="postsDetail.html">神秘海域</a>
+	                      <li v-for="(hposts, idx) in hotPostsList" :key="hposts.id">
+	                          <router-link :to="{ name: 'posts-detail', params: {id: hposts.id} }">{{ hposts.title }}</router-link>
 	                      </li>
 	                  </ul>
 	              </aside>
@@ -101,7 +69,7 @@
 </template>
 <script>
 	import psSlider from '@/components/common/ps-slider'
-	import { getIndexPostsList, getIndexHotGameList } from '@/api/index'
+	import { getIndexPostsList, getIndexHotGameList, getIndexHotNewsList, getIndexHotPostsList } from '@/api/index'
 
 	export default {
 		name: 'ps-index',
@@ -112,9 +80,9 @@
 		data () {
 			return {
 				postsList: [],
-				hotnewsList: [],
-				hotPostsList: [],
-				hotGameList: []
+				hotGameList: [],
+				hotNewsList: [],
+				hotPostsList: []
 			}
 		},
 
@@ -129,7 +97,16 @@
 				console.log(res)
 				this.hotGameList = res
 			}))
-
+			//右侧Hot新闻
+			getIndexHotNewsList(this.API_URL + '/indexHotNewsList', []).then((res => {
+				console.log(res)
+				this.hotNewsList = res
+			}))
+			//右侧Hot帖子
+			getIndexHotPostsList(this.API_URL + '/indexHotPostsList', []).then((res => {
+				console.log(res)
+				this.hotPostsList = res
+			}))
 		}
 	}
 </script>

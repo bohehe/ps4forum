@@ -6,6 +6,8 @@ import psNewsList from '@/views/ps-newsList'
 import psNewsDetail from '@/views/ps-newsDetail'
 import psGameList from '@/views/ps-gameList'
 import psGameDetail from '@/views/ps-gameDetail'
+import psPostsList from '@/views/ps-postsList'
+import psPostsDetail from '@/views/ps-postsDetail'
 
 Vue.use(Router)
 
@@ -41,6 +43,18 @@ export default new Router({
           path: ':id',
           name: 'game-detail',
           component: psGameDetail
+        }
+      ]
+    },
+    {
+      path: '/posts',
+      name: 'posts-list',
+      component: psPostsList,
+      children: [
+        {
+          path: ':id',
+          name: 'posts-detail',
+          component: psPostsDetail
         }
       ]
     }
