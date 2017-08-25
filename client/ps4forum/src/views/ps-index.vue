@@ -17,7 +17,7 @@
 	                          </h4>
 	                      </a>
 
-	                      <router-link v-for="(posts, idx) in postsList" :key="posts.id" to="news/posts.id" class="list-group-item">
+	                      <router-link v-for="(posts, idx) in postsList" :key="posts.id" :to="{ name: 'news-detail', params: { id: posts.id } }" class="list-group-item">
 	                          <h4 class="list-group-item-heading">
 	                              {{ posts.title }}
 	                          </h4>
@@ -43,23 +43,8 @@
 	              <aside class="col-md-12 col-md-push-1">
 	                  <h4>最新游戏</h4>
 	                  <ul>
-	                      <li>
-	                          <a href="gameDetail.html">BloodBorne2</a>
-	                      </li>
-	                      <li>
-	                          <a href="gameDetail.html">巫师4</a>
-	                      </li>
-	                      <li>
-	                          <a href="gameDetail.html">生化危机8</a>
-	                      </li>
-	                      <li>
-	                          <a href="gameDetail.html">尼尔：机械纪元</a>
-	                      </li>
-	                      <li>
-	                          <a href="gameDetail.html">仁王</a>
-	                      </li>
-	                      <li>
-	                          <a href="gameDetail.html">神秘海域</a>
+	                      <li v-for="(game, idx) in hotGameList" :key="game.id">
+	                          <router-link :to="{ name: 'game-detail', params: {id: game.id} }">{{ game.title }}</router-link>
 	                      </li>
 	                  </ul>
 	              </aside>
@@ -116,7 +101,7 @@
 </template>
 <script>
 	import psSlider from '@/components/common/ps-slider'
-	import { getIndexPostsList } from '@/api/index'
+	import { getIndexPostsList, getIndexHotGameList } from '@/api/index'
 
 	export default {
 		name: 'ps-index',
@@ -139,6 +124,12 @@
 				console.log(res)
       	this.postsList = res
       }))
+			//右侧Hot游戏
+			getIndexHotGameList(this.API_URL + '/indexHotGameList', []).then((res => {
+				console.log(res)
+				this.hotGameList = res
+			}))
+
 		}
 	}
 </script>
