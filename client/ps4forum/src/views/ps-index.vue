@@ -17,17 +17,15 @@
 	                          </h4>
 	                      </a>
 
-	                      <a class="list-group-item">
+	                      <router-link v-for="(posts, idx) in postsList" :key="posts.id" to="news/posts.id" class="list-group-item">
 	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
+	                              {{ posts.title }}
 	                          </h4>
 	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
+	                              {{ posts.intro }}
 	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
+	                          <img v-for="(img, imgIdx) in posts.imgs" width="230px" height="135px" :src="img">
+	                      </router-link>
 	                      
 	                  </div>
 	                  <ul class="pagination">
@@ -118,7 +116,8 @@
 </template>
 <script>
 	import psSlider from '@/components/common/ps-slider'
-	
+	import { getIndexPostsList } from '@/api/index'
+
 	export default {
 		name: 'ps-index',
 		components: {
@@ -132,6 +131,14 @@
 				hotPostsList: [],
 				hotGameList: []
 			}
+		},
+
+		created () {
+			//
+			getIndexPostsList(this.API_URL + '/indexPostsList', []).then((res => {
+				console.log(res)
+      	this.postsList = res
+      }))
 		}
 	}
 </script>

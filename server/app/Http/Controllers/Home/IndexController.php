@@ -38,9 +38,9 @@ class IndexController extends Controller {
 				'title' => '《仁王》DLC“义的后继者”详细内容全新截图公布',
 				'intro' => '近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。',
 				'imgs' => [
-					'../assets/images/r1.jpg',
-					'../assets/images/r1.jpg',
-					'../assets/images/r1.jpg'
+					'http://ps4forum/images/r1.jpg',
+					'http://ps4forum/images/r1.jpg',
+					'http://ps4forum/images/r1.jpg'
 				]
 			],
 			[
@@ -48,9 +48,8 @@ class IndexController extends Controller {
 				'title' => '《仁王》DLC“义的后继者”详细内容全新截图公布',
 				'intro' => '近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。',
 				'imgs' => [
-					'../assets/images/r1.jpg',
-					'../assets/images/r1.jpg',
-					'../assets/images/r1.jpg'
+					'http://ps4forum/images/r1.jpg',
+					'http://ps4forum/images/r1.jpg',
 				]
 			]
 		];
