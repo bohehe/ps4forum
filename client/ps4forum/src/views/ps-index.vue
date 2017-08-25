@@ -16,7 +16,8 @@
 	                              【置顶】xxxxxxxxxx
 	                          </h4>
 	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
+
+	                      <a class="list-group-item">
 	                          <h4 class="list-group-item-heading">
 	                              《仁王》DLC“义的后继者”详细内容全新截图公布
 	                          </h4>
@@ -27,66 +28,7 @@
 	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
 	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
 	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
-	                      <a href="newsDetail.html" class="list-group-item">
-	                          <h4 class="list-group-item-heading">
-	                              《仁王》DLC“义的后继者”详细内容全新截图公布
-	                          </h4>
-	                          <p class="list-group-item-text">
-	                              近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。
-	                          </p>
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display: inline-block;padding: 10px;">
-	                          <img width="230px" height="135px" src="../assets/images/r1.jpg" alt="" style="display:inline-block;padding: 10px;">
-	                      </a>
+	                      
 	                  </div>
 	                  <ul class="pagination">
 	                      <li><a href="#">&laquo;</a></li>
@@ -176,16 +118,20 @@
 </template>
 <script>
 	import psSlider from '@/components/common/ps-slider'
-	import { getIndexBannerList } from '@/api/index'
-
+	
 	export default {
 		name: 'ps-index',
 		components: {
 			psSlider
 		},
 
-		created(){
-			getIndexBannerList(this.API_URL + '/indexBannerList', [])
+		data () {
+			return {
+				postsList: [],
+				hotnewsList: [],
+				hotPostsList: [],
+				hotGameList: []
+			}
 		}
 	}
 </script>

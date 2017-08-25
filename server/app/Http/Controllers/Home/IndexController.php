@@ -10,19 +10,19 @@ class IndexController extends Controller {
 			[
 				'id' => 1,
 				'title' => 'test1',
-				'imgUrl' => '../../assets/images/b4.jpg',
+				'imgUrl' => 'http://ps4forum/images/b4.jpg',
 				'href' => ''
 			],
 			[
 				'id' => 2,
 				'title' => 'test2',
-				'imgUrl' => '../../assets/images/b5.jpg',
+				'imgUrl' => 'http://ps4forum/images/b5.jpg',
 				'href' => ''
 			],
 			[
 				'id' => 3,
 				'title' => 'test2',
-				'imgUrl' => '../../assets/images/b6.jpg',
+				'imgUrl' => 'http://ps4forum/images/b6.jpg',
 				'href' => ''
 			]
 		];
