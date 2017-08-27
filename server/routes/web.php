@@ -28,6 +28,8 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/indexHotGameList', 'Home\IndexController@getHotGameList');
 	Route::get('/indexHotNewsList', 'Home\IndexController@getHotNewsList');
 	Route::get('/indexHotPostsList', 'Home\IndexController@getHotPostsList');
+
+	Route::get('/NewsList', 'Home\NewsController@getPostslists');
 });
 
 
