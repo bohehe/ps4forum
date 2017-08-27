@@ -10,19 +10,19 @@ class IndexController extends Controller {
 			[
 				'id' => 1,
 				'title' => 'test1',
-				'imgUrl' => 'http://ps4forum/images/b4.jpg',
+				'imgUrl' => env('APP_URL') . '/images/b4.jpg',
 				'href' => ''
 			],
 			[
 				'id' => 2,
 				'title' => 'test2',
-				'imgUrl' => 'http://ps4forum/images/b5.jpg',
+				'imgUrl' => env('APP_URL') . '/images/b5.jpg',
 				'href' => ''
 			],
 			[
 				'id' => 3,
 				'title' => 'test2',
-				'imgUrl' => 'http://ps4forum/images/b6.jpg',
+				'imgUrl' => env('APP_URL') . '/images/b6.jpg',
 				'href' => ''
 			]
 		];
@@ -38,9 +38,9 @@ class IndexController extends Controller {
 				'title' => '《仁王》DLC“义的后继者”详细内容全新截图公布',
 				'intro' => '近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。',
 				'imgs' => [
-					'http://ps4forum/images/r1.jpg',
-					'http://ps4forum/images/r1.jpg',
-					'http://ps4forum/images/r1.jpg'
+					env('APP_URL') . '/images/r1.jpg',
+					env('APP_URL') . '/images/r1.jpg',
+					env('APP_URL') . '/images/r1.jpg'
 				]
 			],
 			[
@@ -48,8 +48,8 @@ class IndexController extends Controller {
 				'title' => '《仁王》DLC“义的后继者”详细内容全新截图公布',
 				'intro' => '近日，《仁王》官网公布了游戏新DLC“义的后继者”详细内容和游戏的全新截图。',
 				'imgs' => [
-					'http://ps4forum/images/r1.jpg',
-					'http://ps4forum/images/r1.jpg',
+					env('APP_URL') . '/images/r1.jpg',
+					env('APP_URL') . '/images/r1.jpg',
 				]
 			]
 		];
