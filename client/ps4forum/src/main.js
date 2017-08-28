@@ -7,7 +7,7 @@ import router from './router'
 import 'jquery'
 import 'bootstrap'
 
-import util from './util'
+import util from './util/apiConfig'
 
 Vue.use(util)
 
