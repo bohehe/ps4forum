@@ -14,7 +14,12 @@ class NewsController extends Controller {
 				'uImgUrl' => env('APP_URL') . '/images/avator.png',
 				'uName' => '卑鄙的异乡人',
 				'countReply' => 12,
-				'postsDate' => '4分钟前'
+				'postsDate' => '4分钟前',
+				'newsImgs' => [
+					env('APP_URL') . '/images/b2.jpg',
+					env('APP_URL') . '/images/b3.jpg',
+					env('APP_URL') . '/images/b6.jpg'
+				]
 			],
 			[
 				'id' => 2,
@@ -23,7 +28,12 @@ class NewsController extends Controller {
 				'uImgUrl' => env('APP_URL') . '/images/avator.png',
 				'uName' => '卑鄙的异乡人',
 				'countReply' => 12,
-				'postsDate' => '4分钟前'
+				'postsDate' => '4分钟前',
+				'newsImgs' => [
+					env('APP_URL') . '/images/b2.jpg',
+					env('APP_URL') . '/images/b3.jpg',
+					env('APP_URL') . '/images/b6.jpg'
+				]
 			],
 			[
 				'id' => 3,
@@ -32,9 +42,17 @@ class NewsController extends Controller {
 				'uImgUrl' => env('APP_URL') . '/images/avator.png',
 				'uName' => '卑鄙的异乡人',
 				'countReply' => 12,
-				'postsDate' => '4分钟前'
+				'postsDate' => '4分钟前',
+				'newsImgs' => [
+					env('APP_URL') . '/images/b2.jpg',
+					env('APP_URL') . '/images/b3.jpg',
+					env('APP_URL') . '/images/b6.jpg'
+				]
 			],
 		];
+
+		return response()->json($data);
+
 	}
 
 }

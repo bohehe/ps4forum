@@ -1,33 +1,32 @@
 <template>
 	<div>
-		<div class="list-group-item">
+		<div v-for="(news, idx) in newsList" :key="news.id" class="list-group-item">
       <div class="row" style="padding: 10px 15px;">
           <div class="col-md-9" style="padding: 0;margin: 0;">
               <h4 class="list-group-item-heading">
-                  <a href="newsDetail.html">PS4《英雄传说 闪之轨迹3》公布在帝国阴影中活动的神秘人物 — 「苍」...</a>
+                  <router-link to="{ name: 'news-detail', params: { id: news.id } }">
+                    {{ news.title }}
+                  </router-link>
               </h4>
               <p class="list-group-item-text">
-                  萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带
+                  {{ news.intro }}
               </p>
               <div class="clearfix img-gather" id="thumbs">
-                  <a href="../../assets/images/b1.jpg" :style="{'background-image': 'url(./../../assets/images/b1.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b2.jpg" :style="{'background-image': 'url(./../../assets/images/b2.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b3.jpg" :style="{'background-image': 'url(./../../assets/images/b3.jpg)'}" title="血源诅咒"></a>
-                  <a href="../../assets/images/b6.jpg" :style="{'background-image': 'url(./../../assets/images/b6.jpg)'}" title="血源诅咒"></a>
+                  <router-link v-for="imgUrl in news.newsImgs" :to="imgUrl" :style="{'background-image': 'url(imgUrl)'}"></router-link>
               </div>
           </div>
           <div class="col-md-3">
               <p class="posts-lists-right">
                   <a href="#">
-                      <img width="34px" height="34px" class="ava" src="../../assets/images/avator.png" alt="">
+                      <img width="34px" height="34px" class="ava" :src="news.uImgUrl" alt="">
                   </a>
-                  <a href="#">卑鄙异乡人</a>
+                  <a href="#">{{ news.uName }}</a>
               </p>
               <p class="posts-lists-right">
-                  <a href="#"><span>回复（13）</span></a>
+                  <a href="#"><span>回复（{{ news.countReply }}）</span></a>
               </p>
               <p class="posts-lists-right">
-                  <span>33分钟前</span>
+                  <span>{{ news.postsDate }}</span>
               </p>
           </div>
       </div>
@@ -35,8 +34,24 @@
 	</div>
 </template>
 <script>
+  import { getNewsList } from '@/api/news'
+
 	export default {
-		name: 'ps-posts-list'
+		name: 'ps-posts-list',
+    
+    data () {
+      return {
+        newsList: []
+      }
+    },
+
+    created () {
+      //新闻列表
+      getNewsList(this.API_URL + '/newsList', []).then((res => {
+        console.log(res)
+        this.newsList = res
+      }))
+    }
 	}
 
 	$('#thumbs a').touchTouch()
