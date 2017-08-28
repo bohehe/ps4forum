@@ -15,13 +15,6 @@ Route::get('/', function () {
     return [];
 });
 
-// 指定允许其他域名访问  
-header('Access-Control-Allow-Origin:*');  
-// 响应类型  
-header('Access-Control-Allow-Methods:get');  
-// 响应头设置  
-header('Access-Control-Allow-Headers:x-requested-with,content-type');
-
 Route::group(['prefix' => 'api'], function () {
 	Route::get('/indexBannerList', 'Home\IndexController@getBannerList');
 	Route::get('/indexPostsList', 'Home\IndexController@getPostsList');
