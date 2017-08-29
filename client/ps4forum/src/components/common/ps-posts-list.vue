@@ -4,14 +4,14 @@
       <div class="row" style="padding: 10px 15px;">
           <div class="col-md-9" style="padding: 0;margin: 0;">
               <h4 class="list-group-item-heading">
-                  <router-link to="{ name: 'news-detail', params: { id: news.id } }">
+                  <router-link :to="{ name: 'news-detail', params: { id: news.id } }">
                     {{ news.title }}
                   </router-link>
               </h4>
               <p class="list-group-item-text">
                   {{ news.intro }}
               </p>
-              <div class="clearfix img-gather" id="thumbs">
+              <div class="clearfix img-gather thumbs">
                   <a v-for="imgUrl in news.newsImgs" :href="imgUrl" v-bind:style="{ backgroundImage: 'url(' + imgUrl + ')' }"></a>
               </div>
           </div>
@@ -34,6 +34,7 @@
 	</div>
 </template>
 <script>
+  import '@/assets/js/touchTouch.jquery.js'
   import { getNewsList } from '@/api/news'
 
 	export default {
@@ -54,10 +55,14 @@
     }
 	}
 
-	$('#thumbs a').touchTouch()
+  //图片列表查看
+  $('.thumbs a').touchTouch()
   $('.posts-lists .list-group-item').hover(function() {
       $(this).addClass('posts-list-hover')
   }, function() {
       $(this).removeClass('posts-list-hover')
   })
 </script>
+<style>
+  @import '../../assets/css/touchTouch.css';
+</style>
