@@ -12,7 +12,7 @@
                   {{ news.intro }}
               </p>
               <div class="clearfix img-gather" id="thumbs">
-                  <router-link v-for="imgUrl in news.newsImgs" :to="imgUrl" :style="{'background-image': 'url(imgUrl)'}"></router-link>
+                  <a v-for="imgUrl in news.newsImgs" :href="imgUrl" v-bind:style="{ backgroundImage: 'url(' + imgUrl + ')' }"></a>
               </div>
           </div>
           <div class="col-md-3">
