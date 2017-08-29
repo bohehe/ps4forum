@@ -17,13 +17,13 @@
     margin: 5px;
 }
 
-#thumbs {
+.thumbs {
     max-width: 620px;
     /* margin: 10px auto; */
     text-align: center;
 }
 
-#thumbs a {
+.thumbs a {
     border-radius: 4px;
     margin-bottom: 15px;
     background-position: center center;
@@ -39,7 +39,7 @@
 -----------------------------*/
 
 @media screen and (max-width: 960px) {
-    #thumbs {
+    .thumbs {
         width: auto;
     }
 
