@@ -2,21 +2,21 @@
   <nav id="navigator" class="navbar navbar-default" role="navigation">
     <div class="container" style="padding: 0 60px;">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">logo图</a>
+            <router-link class="navbar-brand" to="/index">logo图</router-link>
         </div>
         <div>
             <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="newsList.html">新闻</a></li>
+                <li class="active"><router-link to="/news">新闻</router-link></li>
                 <li class="dropdown">
-                    <a href="postsList.html" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="postsList.html?type=-1">全部</a></li>
-                        <li><a href="postsList.html?type=1">攻略</a></li>
-                        <li><a href="postsList.html?type=2">吐槽</a></li>
-                        <li><a href="postsList.html?type=3">心得</a></li>
+                        <li><router-link to="/posts">全部</router-link></li>
+                        <li><router-link :to="{ name: 'posts-list', params: { type: 1 } }">攻略</router-link></li>
+                        <li><router-link :to="{ name: 'posts-list', params: { type: 2 } }">吐槽</router-link></li>
+                        <li><router-link :to="{ name: 'posts-list', params: { type: 3 } }">心得</router-link></li>
                     </ul>
                 </li>
-                <li><a href="gameList.html">游戏</a></li>
+                <li><router-link to="/game">游戏</router-link></li>
                 <li><a href="tradeList.html">买卖</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" style="margin-left: 30px;">

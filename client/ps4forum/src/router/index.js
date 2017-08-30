@@ -47,7 +47,7 @@ export default new Router({
       ]
     },
     {
-      path: '/posts',
+      path: '/posts/:type?',
       name: 'posts-list',
       component: psPostsList,
       children: [
