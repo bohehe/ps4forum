@@ -32,6 +32,7 @@
 	
 	export default {
 		name: 'ps-newsList',
+
 		components: {
 			psPostsList
 		}

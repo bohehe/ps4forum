@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-for="(news, idx) in newsList" :key="news.id" class="list-group-item">
+		<div v-for="(news, idx) in newsList" :key="news.id" class="list-group-item" v-on:mouseover="listHover">
       <div class="row" style="padding: 10px 15px;">
           <div class="col-md-9" style="padding: 0;margin: 0;">
               <h4 class="list-group-item-heading">
@@ -34,7 +34,6 @@
 	</div>
 </template>
 <script>
-  import '@/assets/js/touchTouch.jquery.js'
   import { getNewsList } from '@/api/news'
 
 	export default {
@@ -52,17 +51,18 @@
         console.log(res)
         this.newsList = res
       }))
+    },
+
+    methods: {
+      listHover() {
+        $('.posts-lists .list-group-item').hover(function() {
+            $(this).addClass('posts-list-hover')
+        }, function() {
+            $(this).removeClass('posts-list-hover')
+        })
+        $('.thumbs a').touchTouch()
+      }
     }
 	}
 
-  //图片列表查看
-  $('.thumbs a').touchTouch()
-  $('.posts-lists .list-group-item').hover(function() {
-      $(this).addClass('posts-list-hover')
-  }, function() {
-      $(this).removeClass('posts-list-hover')
-  })
 </script>
-<style>
-  @import '../../assets/css/touchTouch.css';
-</style>
