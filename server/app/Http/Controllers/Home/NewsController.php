@@ -1,9 +1,9 @@
 <?php
 namespace App\Http\Controllers\Home;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Home\HomeController;
 
-class NewsController extends Controller {
+class NewsController extends HomeController {
 
 	public function getPostslists () {
 		$data = [
@@ -54,5 +54,6 @@ class NewsController extends Controller {
 		return response()->json($data);
 
 	}
+
 
 }

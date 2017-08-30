@@ -47,6 +47,12 @@
 	export default {
 		name: 'ps-newsDetail',
 
+		data () {
+			return {
+				userLeftInfo: []
+			}
+		},
+
 		components: {
 			psCommentList,
 			psCommentEmoji,

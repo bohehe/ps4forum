@@ -1,9 +1,9 @@
 <?php
 namespace App\Http\Controllers\Home;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Home\HomeController;
 
-class IndexController extends Controller {
+class IndexController extends HomeController {
 
 	public function getBannerList () {
 		$data = [
