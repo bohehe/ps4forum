@@ -1,8 +1,272 @@
 <template>
-	<h3>news Detail</h3>
+    <div class="container">
+        <div class="col-md-3" style="height: 1000px;">
+            <div class="detail-left-user">
+                <img style="border-radius: 50%;" height="120px" width="120px" src="../assets/images/avator.png" alt="">
+                <h3>
+                    <a href="#">Good Hunter</a>
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-9" style="background-color: #fff;">
+            <div class="news-head page-header">
+                <h2>血源诅咒2将于2018年4月份发售</h2>
+            </div>
+            <div class="text-content">
+                ARPG一直是LZ特别钟爱的游戏类型，魂系列又是身边小伙伴一直推崇备至的系列，过去因各种机缘不遇没有接触到，这PS4上的精神续作血源不能再错过了。尽管LZ真的很少玩3D游戏动作水平之低劣不言而喻，所以购入前对其难度忐忑不安，但毕竟很久没有玩过能在动作挑战性上让人有成就感的游戏了，怀着对这种沉寂已久的心理回报的憧憬，硬着头皮也要上，就算被当成跟风也要上。
+                <br>
+                <br> 此外还有一个动力是事前了解血源的口味比较重，背景又是很相配的维多利亚时代黑暗神秘风格，后来知道还加入了现代的克苏鲁元素，不过都好啦，味道调得好什么都行，食材本身是其次。总之，如果是新人首先还是明白这不是一个清水风的游戏，晦暗的哥特都市，堕落的神圣教堂，异化的日常生灵，恐怖的人类恶意，以及视人类为虫子的克苏鲁神灵是游戏体验的主轴，完全不能接受的不需勉强。
+                <br>
+                <br> 以在线模式开始游戏，一来就是血污遍地的诊所，不错，而且地上的信使有操作教学，其实也没像外人说的那样对新手不友好嘛……但这里首先我要先尝试要不要过第一个坎——别犯3D晕吐症，造成3D晕的可能性很多，比如视角转速、帧数、材质细节等，总之就结果来看血源的操作设计合我的生理，走了几圈没有问题。非常好，这意味着我应该可以安全地沉浸式体验这个游戏了，不会被挡在生理反应上。
+                <br>
+                <br> 出诊所后立刻就喜欢上了这游戏的美术风格，触目处都是宏大的建筑，由于事前我了解到血源的地图继承了传说中黑魂1的特色——所见之处几乎皆可达，而开场场景又有一个不错的设计，正门出去是在一个市内的高处，可看到城市下方一片虚空，而不是很多游戏喜欢上来就给你看一堆拥塞的街巷。这种开阔感让人马上就有探索无限世界的活力，而非先给你个上手就会很繁琐的暗示。
+                <br>
+                <br> 接下来LZ就开始期待第一次怎么死了（诊所狼人那个死亡教学不算，没有死亡实感）。游戏开篇这黄金夕阳下的混乱城镇会触发人的废墟幻想情结，是死亡诱惑的美学体现，它会让人自发产生“今天，这里是个死去的好地方”的思绪。于是抄起锯肉刀砍了几个乡亲，嗯，这时还不会觉得很难，敌人的血并不多且不会被围攻，然后就这样一直走到雅南中部的火堆，一大群暴民围着的那个。
+                <br>
+                <br> 哦哦，非常有生化4的既视感，当年打生化4时，开场从小打小闹一下子升级到全村围攻的难度跃迁把LZ的过关信心直接归零，加上当年玩生化4有3D晕眩问题直接弃坑好多年后才抚平心灵创伤去补课……但今非昔比，既然LZ打血源没3D晕就不怕闯不过去，于是果断走近，还在琢磨怎么1VN时身后来了发冷枪，回头一看有个枪手不知啥时潜伏在后面，来的时候完全没发现，哎，原来这就是传说中的“制作人恶意”么？不过问题不大，砍了偷袭的家伙回头继续走，顺便读下地上的玩家留言……
+                <br>
+                <br> “当心巡逻”。
+                <br>
+                <br> 嗯？不良预感涌上心头，巡逻的在哪？正踌躇时屏幕上鲜血四溅，LZ被背刺了。战，冷枪手什么的来一个我再杀一个，于是转身抄刀，居然背后转眼又冒出了三四个暴民，此时我还没意识到这情景的含义，靠其它游戏的经验本能地挥动武器，手起刀落三个暴民一路斩过去。
+                <br>
+                <br> 于是，手起，刀落，人亡。一瞬间的事，但亡的只有LZ。
+                <br>
+                <br>
+            </div>
+            <p class="content-head-info">
+                <span><a href="javascript:;">赞（11）</a></span>
+                <span><a href="javascript:;">收藏</a></span>
+                <span><a href="javascript:;">回复（45）</a></span>
+            </p>
+            <div id="game-comment" class="col-md-12">
+                <ul class="media-list" style="padding: 30px 10px;">
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#"><img class="media-object img-circle" src="../assets/images/comment/a.png" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#">风往北吹</a></h4>
+                            <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+                            <div class="ds-comment-footer">
+                                <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年1月28日</span>&nbsp;
+                                <a>
+                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
+                                </a>
+                            </div>
+                            <hr/>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-circle" src="../assets/images/comment/b.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">BiggerHacker</a></h4>
+                                        <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+                                        <div class="ds-comment-footer">
+                                            <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年2月8日</span>&nbsp;
+                                            <a>
+                                                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr/>
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-circle" src="../assets/images/comment/b.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">网名为空</a></h4>
+                                        <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+                                        <div class="ds-comment-footer">
+                                            <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年2月8日</span>&nbsp;
+                                            <a>
+                                                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" src="../assets/images/comment/c.png" alt="菜鸟">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#">good hunter</a></h4>
+                            <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+                            <div class="ds-comment-footer">
+                                <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年5月10日</span>&nbsp;
+                                <a>
+                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <hr/>
+                </ul>
+                <div class="Main">
+                    <div class="Input_Box">
+                        <div class="faceDiv">
+                            <section class="emoji_container">
+                            </section>
+                            <section class="emoji_tab hidden"></section>
+                        </div>
+                        <div class="Input_Foot">
+                            <a class="imgBtn" href="javascript:void(0);">
+                            	<img v-on:load="loadEmoji" src="../assets/images/emoji/tieba/25.jpg">
+                            </a>
+                        </div>
+                        <div contenteditable="true" class="Input_text"></div>
+                    </div>
+                    <button type="submit" class="btn btn-default">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
+	import '@/assets/js/myemojiPl.js'
+
 	export default {
-		name: 'ps-newsDetail'
+		name: 'ps-newsDetail',
+
+		data () {
+			return {
+				emojiconfig: {
+			      tieba: {
+			          name: "贴吧表情",
+			          path: this.SERVER_URL + "/images/emoji/tieba/",
+			          maxNum: 50,
+			          file: ".jpg",
+			          placeholder: ":{alias}:",
+			          alias: {
+			              1: "hehe",
+			              2: "haha",
+			              3: "tushe",
+			              4: "a",
+			              5: "ku",
+			              6: "lu",
+			              7: "kaixin",
+			              8: "han",
+			              9: "lei",
+			              10: "heixian",
+			              11: "bishi",
+			              12: "bugaoxing",
+			              13: "zhenbang",
+			              14: "qian",
+			              15: "yiwen",
+			              16: "yinxian",
+			              17: "tu",
+			              18: "yi",
+			              19: "weiqu",
+			              20: "huaxin",
+			              21: "hu",
+			              22: "xiaonian",
+			              23: "neng",
+			              24: "taikaixin",
+			              25: "huaji",
+			              26: "mianqiang",
+			              27: "kuanghan",
+			              28: "guai",
+			              29: "shuijiao",
+			              30: "jinku",
+			              31: "shengqi",
+			              32: "jinya",
+			              33: "pen",
+			              34: "aixin",
+			              35: "xinsui",
+			              36: "meigui",
+			              37: "liwu",
+			              38: "caihong",
+			              39: "xxyl",
+			              40: "taiyang",
+			              41: "qianbi",
+			              42: "dnegpao",
+			              43: "chabei",
+			              44: "dangao",
+			              45: "yinyue",
+			              46: "haha2",
+			              47: "shenli",
+			              48: "damuzhi",
+			              49: "ruo",
+			              50: "OK"
+			          },
+			          title: {
+			              1: "呵呵",
+			              2: "哈哈",
+			              3: "吐舌",
+			              4: "啊",
+			              5: "酷",
+			              6: "怒",
+			              7: "开心",
+			              8: "汗",
+			              9: "泪",
+			              10: "黑线",
+			              11: "鄙视",
+			              12: "不高兴",
+			              13: "真棒",
+			              14: "钱",
+			              15: "疑问",
+			              16: "阴脸",
+			              17: "吐",
+			              18: "咦",
+			              19: "委屈",
+			              20: "花心",
+			              21: "呼~",
+			              22: "笑脸",
+			              23: "冷",
+			              24: "太开心",
+			              25: "滑稽",
+			              26: "勉强",
+			              27: "狂汗",
+			              28: "乖",
+			              29: "睡觉",
+			              30: "惊哭",
+			              31: "生气",
+			              32: "惊讶",
+			              33: "喷",
+			              34: "爱心",
+			              35: "心碎",
+			              36: "玫瑰",
+			              37: "礼物",
+			              38: "彩虹",
+			              39: "星星月亮",
+			              40: "太阳",
+			              41: "钱币",
+			              42: "灯泡",
+			              43: "茶杯",
+			              44: "蛋糕",
+			              45: "音乐",
+			              46: "haha",
+			              47: "胜利",
+			              48: "大拇指",
+			              49: "弱",
+			              50: "OK"
+			          }
+			      }
+			  }
+			}
+		},
+
+		methods: {
+			loadEmoji () {
+				$('.Main').myEmoji({ emojiconfig: this.emojiconfig })
+			}
+		}
 	}
+
 </script>
+<style>
+	@import '../assets/css/newsDetail.css';
+	@import '../assets/css/comment.css';
+	@import '../assets/css/myemojiPl.css';
+</style>
