@@ -146,10 +146,10 @@
 					});
 					for (var emojilist in emojiconfig) {
 						emojiContainer.append('<section class="for_' + emojilist + '"></section>');
-						faceDiv.find('.emoji_tab').append('<a href="#!" data-target="for_' + emojilist + '">' + emojiconfig[emojilist].name + '</a>');
+						faceDiv.find('.emoji_tab').append('<a href="javascript:;" data-target="for_' + emojilist + '">' + emojiconfig[emojilist].name + '</a>');
 						for (var i = 1; i <= emojiconfig[emojilist].maxNum; i++) {
 							if (emojiContainer.find('.for_' + emojilist) !== undefined) {
-								emojiContainer.find('.for_' + emojilist).append('<a href="#!" class="_img"><img src="' + emojiconfig[emojilist].path + i + emojiconfig[emojilist].file + '" alt="" data-alias="'+(emojiconfig[emojilist].alias == undefined ? (i+emojiconfig[emojilist].file) : emojiconfig[emojilist].alias[i])+'" title="' + (emojiconfig[emojilist].title == undefined ? '' : emojiconfig[emojilist].title[i]) + '" /></a>');
+								emojiContainer.find('.for_' + emojilist).append('<a href="javascript:;" class="_img"><img src="' + emojiconfig[emojilist].path + i + emojiconfig[emojilist].file + '" alt="" data-alias="'+(emojiconfig[emojilist].alias == undefined ? (i+emojiconfig[emojilist].file) : emojiconfig[emojilist].alias[i])+'" title="' + (emojiconfig[emojilist].title == undefined ? '' : emojiconfig[emojilist].title[i]) + '" /></a>');
 							}
 						}
 					}
