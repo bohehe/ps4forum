@@ -25,38 +25,32 @@ export default new Router({
     {
       path: '/news',
       name: 'news-list',
-      component: psNewsList,
-      children: [
-        {
-          path: ':id',
-          name: 'news-detail',
-          component: psNewsDetail
-        }
-      ]
+      component: psNewsList
+    },
+    {
+      path: '/news/:id',
+      name: 'news-detail',
+      component: psNewsDetail
     },
     {
       path: '/game',
       name: 'game-list',
-      component: psGameList,
-      children: [
-        {
-          path: ':id',
-          name: 'game-detail',
-          component: psGameDetail
-        }
-      ]
+      component: psGameList
     },
     {
-      path: '/posts/:type?',
+      path: '/game/:id',
+      name: 'game-detail',
+      component: psGameDetail
+    },
+    {
+      path: '/posts',
       name: 'posts-list',
-      component: psPostsList,
-      children: [
-        {
-          path: ':id',
-          name: 'posts-detail',
-          component: psPostsDetail
-        }
-      ]
+      component: psPostsList
+    },
+    {
+      path: '/posts/:id',
+      name: 'posts-detail',
+      component: psPostsDetail
     }
   ]
 })

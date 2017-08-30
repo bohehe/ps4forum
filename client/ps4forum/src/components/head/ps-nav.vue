@@ -8,13 +8,7 @@
             <ul class="nav navbar-nav navbar-left">
                 <li class="active"><router-link to="/news">新闻</router-link></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">论坛<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><router-link to="/posts">全部</router-link></li>
-                        <li><router-link :to="{ name: 'posts-list', params: { type: 1 } }">攻略</router-link></li>
-                        <li><router-link :to="{ name: 'posts-list', params: { type: 2 } }">吐槽</router-link></li>
-                        <li><router-link :to="{ name: 'posts-list', params: { type: 3 } }">心得</router-link></li>
-                    </ul>
+                    <router-link to="/posts">论坛</router-link>
                 </li>
                 <li><router-link to="/game">游戏</router-link></li>
                 <li><a href="tradeList.html">买卖</a></li>

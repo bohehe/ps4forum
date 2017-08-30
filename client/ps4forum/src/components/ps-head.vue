@@ -1,8 +1,8 @@
 <template>
 	<div>
-			<ps-nav></ps-nav>
-	    <ps-login></ps-login>
-	    <ps-register></ps-register>
+		<ps-nav></ps-nav>
+	  <ps-login></ps-login>
+	  <ps-register></ps-register>
 	</div>
 </template>
 <script>
