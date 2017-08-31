@@ -16,17 +16,17 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
+	Route::get('/userLeftInfo', 'Home\HomeController@getUserLeftInfo');
+	Route::get('/commentList', 'Home\HomeController@getCommentList');
+
 	Route::get('/indexBannerList', 'Home\IndexController@getBannerList');
 	Route::get('/indexPostsList', 'Home\IndexController@getPostsList');
 	Route::get('/indexHotGameList', 'Home\IndexController@getHotGameList');
 	Route::get('/indexHotNewsList', 'Home\IndexController@getHotNewsList');
 	Route::get('/indexHotPostsList', 'Home\IndexController@getHotPostsList');
 
-	Route::get('/newsList', 'Home\NewsController@getPostslists');
-	Route::get('/newsContent', 'Home\NewsController@getNewsContent');
+	Route::get('/postsDetail', 'Home\PostsController@getPostsDetail');
 
-	Route::get('/userLeftInfo', 'Home\HomeController@getUserLeftInfo');
-	Route::get('/commentList', 'Home\HomeController@getCommentList');
 });
 
 

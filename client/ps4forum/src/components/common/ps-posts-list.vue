@@ -45,7 +45,7 @@
       }
     },
 
-    props: ['postDetailRouteName'],
+    props: ['postDetailRouteName'], //根据父组件给出的路由名称，href指向不同的详情页(news-detail, posts-detail)
 
     created () {
       //新闻列表
