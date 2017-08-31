@@ -1,31 +1,41 @@
 <template>
   <ul class="media-list" style="padding: 30px 10px;">
-      <li class="media">
+
+      <li v-for="(comment, idx) in commentList" class="media">
           <div class="media-left">
-              <a href="#"><img class="media-object img-circle" src="../../assets/images/comment/a.png" alt=""></a>
+              <router-link to="#">
+                <img class="media-object img-circle" :src="comment.uImgUrl">
+              </router-link>
           </div>
           <div class="media-body">
-              <h4 class="media-heading"><a href="#">风往北吹</a></h4>
-              <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+              <h4 class="media-heading">
+                <router-link to="#">{{ comment.uName }}</router-link>
+              </h4>
+              <p>{{ comment.commentContent }}</p>
               <div class="ds-comment-footer">
-                  <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年1月28日</span>&nbsp;
+                  <span class="ds-time">{{ comment.Date }}</span>&nbsp;
                   <a>
                       <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
                   </a>
               </div>
               <hr/>
-              <ul class="media-list">
-                  <li class="media">
+              <ul v-if="comment.reply.length > 0" class="media-list">
+                  <li v-for="(reply, idx) in comment.reply" class="media">
                       <div class="media-left">
-                          <a href="#">
-                              <img class="media-object img-circle" src="../../assets/images/comment/b.png" alt="">
-                          </a>
+                          <router-link to="#">
+                              <img class="media-object img-circle" :src="reply.uImgUrl">
+                          </router-link>
                       </div>
                       <div class="media-body">
-                          <h4 class="media-heading"><a href="#">BiggerHacker</a></h4>
-                          <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
+                          <h4 class="media-heading">
+                            <router-link to="#">{{ reply.uName }}</router-link>
+                            <router-link v-if="!isEmptyObject(reply.replyTo)" to="#">
+                              @{{ reply.replyTo.replyToUname }}
+                            </router-link>
+                          </h4>
+                          <p>{{ reply.commentContent }}</p>
                           <div class="ds-comment-footer">
-                              <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年2月8日</span>&nbsp;
+                              <span class="ds-time">{{ reply.Date }}</span>&nbsp;
                               <a>
                                   <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
                               </a>
@@ -33,49 +43,30 @@
                       </div>
                   </li>
                   <hr/>
-                  <li class="media">
-                      <div class="media-left">
-                          <a href="#">
-                              <img class="media-object img-circle" src="../../assets/images/comment/b.png" alt="">
-                          </a>
-                      </div>
-                      <div class="media-body">
-                          <h4 class="media-heading"><a href="#">网名为空</a></h4>
-                          <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
-                          <div class="ds-comment-footer">
-                              <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年2月8日</span>&nbsp;
-                              <a>
-                                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
-                              </a>
-                          </div>
-                      </div>
-                  </li>
               </ul>
           </div>
       </li>
       <hr/>
-      <li class="media">
-          <div class="media-left">
-              <a href="#">
-                  <img class="media-object img-circle" src="../../assets/images/comment/c.png" alt="菜鸟">
-              </a>
-          </div>
-          <div class="media-body">
-              <h4 class="media-heading"><a href="#">good hunter</a></h4>
-              <p>你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！悉心照料人偶。你竟敢直视于我！</p>
-              <div class="ds-comment-footer">
-                  <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年5月10日</span>&nbsp;
-                  <a>
-                      <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 回复
-                  </a>
-              </div>
-          </div>
-      </li>
-      <hr/>
+
   </ul>
 </template>
 <script>
+  import { getCommentList } from '@/api/common.js'
+
   export default {
-    name: 'ps-comment-list'
+    name: 'ps-comment-list',
+
+    data() {
+      return {
+        commentList: []
+      }
+    },
+
+    created() {
+      getCommentList(this.API_URL + '/commentList', []).then(( res => {
+        console.log(res)
+        this.commentList = res
+      } ))
+    }
   }
 </script>

@@ -7,9 +7,11 @@ import router from './router'
 import 'jquery'
 import 'bootstrap'
 
-import util from './util/apiConfig'
+import func from './util/function'
+import apiConfig from './util/apiConfig'
 
-Vue.use(util)
+Vue.use(apiConfig)
+Vue.use(func)
 
 Vue.config.productionTip = false
 
