@@ -4,7 +4,7 @@
       <div class="row" style="padding: 10px 15px;">
           <div class="col-md-9" style="padding: 0;margin: 0;">
               <h4 class="list-group-item-heading">
-                  <router-link :to="{ name: 'news-detail', params: { id: news.id } }">
+                  <router-link :to="{ name: postDetailRouteName, params: { id: news.id } }">
                     {{ news.title }}
                   </router-link>
               </h4>
@@ -44,6 +44,8 @@
         newsList: []
       }
     },
+
+    props: ['postDetailRouteName'],
 
     created () {
       //新闻列表

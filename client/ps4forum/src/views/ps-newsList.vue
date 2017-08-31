@@ -12,7 +12,7 @@
               </div>
           </form>
           <div class="col-md-12 posts-lists" style="margin-top: 30px;">
-							<ps-posts-list></ps-posts-list>
+							<ps-posts-list v-bind:postDetailRouteName="postDetailRouteName"></ps-posts-list>
               <ul class="pagination">
                   <li><a href="#">&laquo;</a></li>
                   <li class="active"><a href="#">1</a></li>
@@ -32,6 +32,12 @@
 	
 	export default {
 		name: 'ps-newsList',
+
+    data () {
+      return {
+        postDetailRouteName: 'news-detail' //传递此参数到子组件psPostsList, 用以区别不同list路由到对应的详情
+      }
+    },
 
 		components: {
 			psPostsList
