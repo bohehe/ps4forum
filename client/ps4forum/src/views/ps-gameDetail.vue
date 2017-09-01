@@ -42,7 +42,7 @@
                       <div v-if="!isEmptyObject(gameData.gameImgsUrls)" class="game-info-block">
                           <h3 class="game-info-title">游戏图片</h3>
                           <div class="clearfix img-gather thumbs">
-                            <a v-for="imgUrl in gameData.gameImgsUrls" :href="imgUrl" v-bind:style="{ backgroundImage: 'url(' + imgUrl + ')' }"></a>
+                            <a v-on:mouseover="runTouchTouch()" v-for="imgUrl in gameData.gameImgsUrls" :href="imgUrl" v-bind:style="{ backgroundImage: 'url(' + imgUrl + ')' }"></a>
                           </div>
                       </div>
                       <div class="game-info-block">
@@ -140,13 +140,9 @@
 		},
 
 		methods: {
-			ss() {
+			runTouchTouch() {
 				$('.thumbs a').touchTouch()
 			}
-		},
-
-		mounted () {
-			this.ss()
 		}
 	}
 </script>
