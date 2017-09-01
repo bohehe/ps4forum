@@ -81,9 +81,9 @@
       <div class="row">
           <div id="gamelist" class="col-md-8 col-md-push-2 gamelist">
               <div v-for="(game, idx) in gameList" :key="game.id" class="media every-game">
-                  <a class="media-left pull-left" href="gameDetail.html">
-                      <img class="media-object" :src="game.gameImgUrl">
-                  </a>
+                  <router-link class="media-left pull-left" :to="{ name: 'game-detail', params: { id: game.id } }">
+                    <img class="media-object" :src="game.gameImgUrl">
+                  </router-link>
                   <div class="media-body">
                       <h4 class="media-heading">{{ game.title }}</h4>
                       <star-rating :increment="0.5" :rating="game.star" :item-size="30" :read-only="true"></star-rating>
