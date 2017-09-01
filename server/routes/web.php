@@ -30,6 +30,8 @@ Route::group(['prefix' => 'api'], function () {
 
 	Route::get('/postsDetail', 'Home\PostsController@getPostsDetail');
 
+	Route::get('/gameList', 'Home\GameController@getGameList');
+
 });
 
 

@@ -12,8 +12,10 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "^3.3.7",
+    "bootstrap-star-rating": "^4.0.2",
     "jquery": "^2.1.1",
     "vue": "^2.3.3",
+    "vue-rate-it": "^1.1.5",
     "vue-router": "^2.6.0",
     "vuex": "^2.3.1"
   },

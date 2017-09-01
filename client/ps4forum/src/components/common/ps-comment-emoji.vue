@@ -8,7 +8,7 @@
           </div>
           <div class="Input_Foot">
               <a class="imgBtn" href="javascript:void(0);">
-                <img v-on:load="loadEmoji" src="../../assets/images/emoji/tieba/25.jpg">
+                <img src="../../assets/images/emoji/tieba/25.jpg">
               </a>
           </div>
           <div contenteditable="true" class="Input_text"></div>
@@ -141,6 +141,10 @@
       loadEmoji () {
         $('.Main').myEmoji({ emojiconfig: this.emojiconfig })
       }
+    },
+
+    mounted () {
+      this.loadEmoji()
     }
   }
 
