@@ -5,7 +5,7 @@ use App\Http\Controllers\Home\HomeController;
 
 class NewsController extends HomeController {
 
-	public function getPostslists () {
+	public function getNewsLists () {
 		$data = [
 			[
 				'id' => 1,

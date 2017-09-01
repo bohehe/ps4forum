@@ -23,117 +23,41 @@
                           </h4>
                       </div>
                       <div class="col-md-10 posts-detail-right">
-                          <div class="posts-content">
-                              血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售血源诅咒2将于2018年4月份发售
-                          </div>
-                          <div class="posts-content-img">
-                              <img src="../assets/images/mannrika.jpg" alt="">
+                          <div v-html="post.content" class="posts-content">
+                              
                           </div>
                           <div class="pull-right posts-content-info">
                               <p>
-                                  <a href="#">举报</a>
-                                  <span>&nbsp;&nbsp;|&nbsp;&nbsp;2楼&nbsp;&nbsp;|&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                  <a href="#">回复</a>
+                                  <router-link to="#">举报</router-link>
+                                  <span>&nbsp;&nbsp;|&nbsp;&nbsp;{{ idx+1 }}楼&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.Date }}&nbsp;&nbsp;</span>
+                                  <router-link to="#">回复</router-link>
                               </p>
                           </div>
                           <div class="posts-content-reply">
                               <ul class="posts-content-reply-wrap">
-                                  <li>
+                                  <li v-if="post.reply.length > 0" v-for="(reply, ridx) in post.reply">
                                       <div>
-                                          <a href="#">
-                                              <img width="34px" height="34px" class="ava" src="../assets/images/avator.png" alt="">
-                                          </a>
+                                          <router-link to="#">
+                                              <img width="34px" height="34px" class="ava" :src="reply.uImgUrl">
+                                          </router-link>
                                       </div>
                                       <div class="posts-content-reply-cont">
-                                          <span class="posts-content-reply-cont-r">
-                                              <a href="#">
-                                              Good Hunter
-                                              </a>：对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。
+                                        <span class="posts-content-reply-cont-r">
+                                              <router-link to="#">
+                                              {{ reply.uName }}
+                                              </router-link>
+                                               <template v-if="isEmptyObject(reply.replyTo.length)">
+                                                &nbsp;回复
+                                                <router-link to="#">
+                                                    {{ reply.replyTo.uName }}
+                                                </router-link>
+                                              </template>
+                                              ：&nbsp;{{ reply.replyContent }}
                                           </span>
                                           <p class="posts-content-reply-cont-p">
-                                              <a style="cursor: pointer;" href="#">举报</a>
-                                              <span>&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                              <a href="#">回复</a>
-                                          </p>
-                                      </div>   
-                                  </li>
-                                  <li>
-                                      <div>
-                                          <a href="#">
-                                              <img width="34px" height="34px" class="ava" src="../assets/images/biggerhacker.jpg" alt="">
-                                          </a>
-                                      </div>
-                                      <div class="posts-content-reply-cont">
-                                          <span class="posts-content-reply-cont-r">
-                                              <a href="#">
-                                                  Bigger Hacker
-                                              </a>：天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。天空与宇宙是一个整体，这就是圣诗。
-                                          </span>
-                                          <p class="posts-content-reply-cont-p">
-                                              <a href="#">举报</a>
-                                              <span>&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                              <a href="#">回复</a>
-                                          </p>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div>
-                                          <a href="#">
-                                              <img width="34px" height="34px" class="ava" src="../assets/images/avator.png" alt="">
-                                          </a>
-                                      </div>
-                                      <div class="posts-content-reply-cont">
-                                          <span class="posts-content-reply-cont-r">
-                                              <a href="#">
-                                              Good Hunter
-                                              </a>：&nbsp;回复
-                                              <a href="#">
-                                                  Bigger Hacker
-                                              </a>
-                                              ：&nbsp;对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。突刺攻击很有效。突刺攻击很有效。突刺攻击很有效。突刺攻击很有效。突刺攻击很有效。
-                                          </span>
-                                          <p class="posts-content-reply-cont-p">
-                                              <a href="#">举报</a>
-                                              <span>&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                              <a href="#">回复</a>
-                                          </p>
-                                      </div>   
-                                  </li>
-                                  <li>
-                                      <div>
-                                          <a href="#">
-                                              <img width="34px" height="34px" class="ava" src="../assets/images/avator.png" alt="">
-                                          </a>
-                                      </div>
-                                      <div class="posts-content-reply-cont">
-                                          <span class="posts-content-reply-cont-r">
-                                              <a href="#">
-                                              Good Hunter
-                                              </a>：对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。
-                                          </span>
-                                          <p class="posts-content-reply-cont-p">
-                                              <a href="#">举报</a>
-                                              <span>&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                              <a href="#">回复</a>
-                                          </p>
-                                      </div>   
-                                  </li>
-                                  <li>
-                                      <div>
-                                          <a href="#">
-                                              <img width="34px" height="34px" class="ava" src="../assets/images/avator.png" alt="">
-                                          </a>
-                                      </div>
-                                      <div class="posts-content-reply-cont">
-                                          <span class="posts-content-reply-cont-r">
-                                              <a href="#">
-                                              Good Hunter
-                                              </a>：对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。对数把轮椅毫不怜惜。
-                                          </span>
-                                          <p class="posts-content-reply-cont-p">
-                                              <a href="#">举报</a>
-                                              <span>&nbsp;&nbsp;2017-08-05 22:23&nbsp;&nbsp;</span>
-                                              <a href="#">回复</a>
+                                              <router-link style="cursor: pointer;" to="#">举报</router-link>
+                                              <span>&nbsp;&nbsp;{{ reply.Date }}&nbsp;&nbsp;</span>
+                                              <router-link to="#">回复</router-link>
                                           </p>
                                       </div>   
                                   </li>

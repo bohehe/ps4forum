@@ -25,6 +25,9 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/indexHotNewsList', 'Home\IndexController@getHotNewsList');
 	Route::get('/indexHotPostsList', 'Home\IndexController@getHotPostsList');
 
+	Route::get('/newsList', 'Home\NewsController@getNewsLists');
+	Route::get('/newsContent', 'Home\NewsController@getNewsContent');	
+
 	Route::get('/postsDetail', 'Home\PostsController@getPostsDetail');
 
 });
