@@ -86,7 +86,7 @@
                   </router-link>
                   <div class="media-body">
                       <h4 class="media-heading">{{ game.title }}</h4>
-                      <star-rating :increment="0.5" :rating="game.star" :item-size="30" :read-only="true"></star-rating>
+                      <star-rating :show-rating="false" :increment="0.5" :rating="game.star" :item-size="30" :read-only="true"></star-rating>
                       <div class="text-muted">
                           {{ game.intro }}
                       </div>

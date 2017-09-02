@@ -5,9 +5,7 @@
             <div class="news-head page-header">
                 <h2>{{ newsContent.title }}</h2>
             </div>
-            <div class="text-content">
-                {{ newsContent.content }}
-            </div>
+            <div v-html="newsContent.content" class="text-content"></div>
             <p class="content-head-info">
                 <span>
                   <a href="javascript:;">赞（{{ newsContent.countZan }}）</a>

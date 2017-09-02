@@ -1,7 +1,7 @@
 <template>
-  <div class="container" id="main-body">
+  <div class="container">
       <div class="row">
-          <div id="game-info-list-left" class="col-md-2 col-md-push-1">
+          <div id="game-info-list-left" class="col-md-2">
               <h4>基本资料卡</h4>
               <ul class="list-group">
                   <li class="list-group-item">
@@ -36,9 +36,9 @@
                   </li>
               </ul>
           </div>
-          <div class="col-md-8 col-md-push-1">
+          <div class="col-md-9 col-md-push-1">
               <div class="row">
-                  <div id="game-info-list-right" class="col-md-10 col-md-push-1">
+                  <div id="game-info-list-right" class="col-md-12">
                       <div v-if="!isEmptyObject(gameData.gameImgsUrls)" class="game-info-block">
                           <h3 class="game-info-title">游戏图片</h3>
                           <div class="clearfix img-gather thumbs">
@@ -53,23 +53,23 @@
                           <h3 class="game-info-title">游戏评分</h3>
                           <div class="game-star-score col-md-7">
                               <div>
-                                  <star-rating :increment="0.5" :rating="5" :item-size="30" :read-only="true"></star-rating>
+                                  <star-rating :show-rating="false" :increment="0.5" :rating="5" :item-size="30" :read-only="true"></star-rating>
                                   <h3 class="star-text"><small>必买神作</small>&nbsp;&nbsp;&nbsp;&nbsp;<small v-if="gameData.gameScore">{{ gameData.gameScore.fiveStar }}%</small></h3>
                               </div>
                               <div>
-                                  <star-rating :increment="0.5" :rating="4" :item-size="30" :read-only="true"></star-rating>
+                                  <star-rating :show-rating="false" :increment="0.5" :rating="4" :item-size="30" :read-only="true"></star-rating>
                                   <h3 class="star-text"><small>佳作推荐</small>&nbsp;&nbsp;&nbsp;&nbsp;<small v-if="gameData.gameScore">{{ gameData.gameScore.fourStar }}%</small></h3>
                               </div>
                               <div>
-                                  <star-rating :increment="0.5" :rating="3" :item-size="30" :read-only="true"></star-rating>
+                                  <star-rating :show-rating="false" :increment="0.5" :rating="3" :item-size="30" :read-only="true"></star-rating>
                                   <h3 class="star-text"><small>中规中矩</small>&nbsp;&nbsp;&nbsp;&nbsp;<small v-if="gameData.gameScore">{{ gameData.gameScore.threeStar }}%</small></h3>
                               </div>
                               <div>
-                                 <star-rating :increment="0.5" :rating="2" :item-size="30" :read-only="true"></star-rating>
+                                 <star-rating :show-rating="false" :increment="0.5" :rating="2" :item-size="30" :read-only="true"></star-rating>
                                   <h3 class="star-text"><small>浪费时间</small>&nbsp;&nbsp;&nbsp;&nbsp;<small v-if="gameData.gameScore">{{ gameData.gameScore.twoStar }}%</small></h3>
                               </div>
                               <div>
-                                  <star-rating :increment="0.5" :rating="1" :item-size="30" :read-only="true"></star-rating>
+                                  <star-rating :show-rating="false" :increment="0.5" :rating="1" :item-size="30" :read-only="true"></star-rating>
                                   <h3 class="star-text"><small>糟糕透顶</small>&nbsp;&nbsp;&nbsp;&nbsp;<small v-if="gameData.gameScore">{{ gameData.gameScore.oneStar }}%</small></h3>
                               </div>
                           </div>
@@ -88,12 +88,12 @@
                               <p v-if="gameData.myComment" class="well well-sm" style="margin: 5px 0 0 0;">
                                   {{ gameData.myComment.content }}
                               </p>
-                              <star-rating :increment="0.5" v-if="gameData.myComment" :rating="gameData.myComment.star" :item-size="30" :read-only="true"></star-rating>
+                              <star-rating :show-rating="false" :increment="0.5" v-if="gameData.myComment" :rating="gameData.myComment.star" :item-size="30" :read-only="true"></star-rating>
                               <button id="modify-comment-star" class="btn btn-default">修改</button>
                           </div>
                       </div>
                   </div>
-                  <div id="game-comment" class="col-md-10 col-md-push-1">
+                  <div id="game-comment" class="col-md-12">
                     <ps-comment-list></ps-comment-list>
                 		<ps-comment-emoji></ps-comment-emoji>
                   </div>
