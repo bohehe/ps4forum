@@ -8,6 +8,8 @@ import psGameList from '@/views/ps-gameList'
 import psGameDetail from '@/views/ps-gameDetail'
 import psPostsList from '@/views/ps-postsList'
 import psPostsDetail from '@/views/ps-postsDetail'
+import psTradeList from '@/views/ps-trade-list'
+import psTradeDetail from '@/views/ps-trade-detail'
 
 Vue.use(Router)
 
@@ -51,6 +53,16 @@ export default new Router({
       path: '/posts/:id',
       name: 'posts-detail',
       component: psPostsDetail
+    },
+    {
+      path: '/trade',
+      name: 'trade-list',
+      component: psTradeList
+    },
+    {
+      path: '/trade/:id',
+      name: 'trade-detail',
+      component: psTradeDetail
     }
   ]
 })

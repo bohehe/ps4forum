@@ -11,7 +11,7 @@
                     <router-link to="/posts">论坛</router-link>
                 </li>
                 <li><router-link to="/game">游戏</router-link></li>
-                <li><a href="tradeList.html">买卖</a></li>
+                <li><router-link to="/trade">买卖</router-link></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" style="margin-left: 30px;">
                 <div class="form-group">

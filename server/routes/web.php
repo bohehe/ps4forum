@@ -34,6 +34,8 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/gameInfo', 'Home\GameController@getGameInfo');
 	Route::get('/gameData', 'Home\GameController@getGameData');
 
+	Route::get('/tradeList', 'Home\TradeController@getTradeList');
+
 });
 
 
