@@ -74,7 +74,7 @@
                     <div class="row" style="padding: 10px 15px;">
                         <div class="col-md-9" style="padding: 0;margin: 0;">
                             <h4 class="list-group-item-heading">
-                                <a href="tradeDetail.html">{{ trade.title }}</a>
+                                <router-link :to="{ name: 'trade-detail', params: { id: trade.id } }">{{ trade.title }}</router-link>
                             </h4>
                             <p class="list-group-item-text">
                                 {{ trade.content }}
