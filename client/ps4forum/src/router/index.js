@@ -10,6 +10,7 @@ import psPostsList from '@/views/ps-postsList'
 import psPostsDetail from '@/views/ps-postsDetail'
 import psTradeList from '@/views/ps-trade-list'
 import psTradeDetail from '@/views/ps-trade-detail'
+import psTradePub from '@/views/ps-trade-pub'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/trade',
       name: 'trade-list',
       component: psTradeList
+    },
+    {
+      path: '/trade/pub',
+      name: 'trade-pub',
+      component: psTradePub
     },
     {
       path: '/trade/:id',

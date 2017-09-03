@@ -48,7 +48,7 @@
                         <input type="text" class="form-control" placeholder="支持模糊搜索...">
                         <span class="input-group-btn">
                             <button class="btn btn-primary" type="button">搜索</button>
-                            <button class="btn btn-success" type="button">发布</button>
+                            <router-link to="/trade/pub" class="btn btn-success">发布</router-link>
                         </span>
                     </div>
                 </div>
