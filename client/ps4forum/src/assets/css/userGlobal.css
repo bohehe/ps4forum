@@ -3,6 +3,11 @@
 	margin-top: -30px;
 	position: relative;
 }
+.user-nav-bg{
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
 .user-nav-head{
 	position: relative;
     display: block;

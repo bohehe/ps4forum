@@ -1,6 +1,6 @@
 <template>
 	<div>
-		  <div class="user-nav" :style="{ background: 'url(' + bgImgUrl.userBgImgUrl + ')no-repeat center', backgroundColor: '#fff', 'background-size': 'cover'}">
+		  <div class="user-nav user-nav-bg" :style="{ backgroundImage: 'url(' + bgImgUrl.userBgImgUrl + ')'}">
 	      <div class="user-nav-head">
 	          <img width="150" height="150" src="../assets/images/avator.png" alt="">
 	      </div>
