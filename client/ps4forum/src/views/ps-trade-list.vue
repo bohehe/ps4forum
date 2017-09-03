@@ -58,7 +58,7 @@
                     <h4 class="list-group-item-heading">
                         <span class="label label-primary">置顶</span>
                         <span>
-                            <a style="color: #b94a48;font-size: 16px;" href="#">禁止发布一切租赁/数字帐号交易帖，发交易的同学请上传「真实产品图片」，否则可能会被关闭</a>
+                            <router-link style="color: #b94a48;font-size: 16px;" to="#">禁止发布一切租赁/数字帐号交易帖，发交易的同学请上传「真实产品图片」，否则可能会被关闭</router-link>
                         </span>
                     </h4>
                 </div>
@@ -66,7 +66,7 @@
                     <h4 class="list-group-item-heading">
                         <span class="label label-primary">置顶</span>
                         <span>
-                            <a style="color: #b94a48;font-size: 16px;" href="#">温馨提示：二手交易有风险。本站不担保任何交易的真实性，请玩家务必谨慎。尽量走闲鱼，不要先款/先货</a>
+                            <router-link style="color: #b94a48;font-size: 16px;" to="#">温馨提示：二手交易有风险。本站不担保任何交易的真实性，请玩家务必谨慎。尽量走闲鱼，不要先款/先货</router-link>
                         </span>
                     </h4>
                 </div>

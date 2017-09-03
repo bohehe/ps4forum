@@ -12,6 +12,9 @@ import psTradeList from '@/views/ps-trade-list'
 import psTradeDetail from '@/views/ps-trade-detail'
 import psTradePub from '@/views/ps-trade-pub'
 
+import psUserCommon from '@/views/ps-user-common'
+import psUserMsg from '@/views/ps-user-msg'
+
 Vue.use(Router)
 
 export default new Router({
@@ -69,6 +72,19 @@ export default new Router({
       path: '/trade/:id',
       name: 'trade-detail',
       component: psTradeDetail
+    },
+    {
+      path: '/user/:id',
+      component: psUserCommon,
+      children: [
+        {
+          // 当 /user/:id/msg 匹配成功，
+          // UserMsg 会被渲染在 User组件 的 <router-view> 中
+          path: 'msg',
+          name: 'user-msg',
+          component: psUserMsg
+        }
+      ]
     }
   ]
 })
