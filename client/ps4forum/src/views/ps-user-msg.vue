@@ -9,36 +9,36 @@
 	        </ul>
 	    </aside>
 	    <div v-if="!isEmptyObject(userMsg.msg)" id="user-msg-list" class="col-md-9 user-msg">
-	    
-	        <div class="user-msg-dialog-left">
+	    	<template v-if="userMsg.msg.msgs" v-for="(msg, idx) in userMsg.msg.msgs">
+	        <div v-if="msg.isMine == 1" class="user-msg-dialog-left">
 	            <div class="user-msg-dialog-left-face">
 	                <div>
-	                    <a href="#">
-	                        <img width="48px" height="48" src="../assets/images/avator.png" alt="">
-	                    </a>
+	                    <router-link to="#">
+	                        <img width="48px" height="48" :src="userMsg.uImgUrl" alt="">
+	                    </router-link>
 	                </div>
 	            </div>
 	            <div class="ang"></div>
 	            <div class="ang2"></div>
 	            <div class="user-msg-dialog-left-cont">
-	                你好啊
+	                {{ msg.content }}
 	            </div>
 	        </div>
-	        <div class="user-msg-dialog-right">
+	        <div v-else class="user-msg-dialog-right">
 	            <div class="user-msg-dialog-right-me">
-	                我不好
+	                {{ msg.content }}
 	            </div>
 	            <div class="ang3"></div>
 	            <div class="ang4"></div>
 	            <div class="user-msg-dialog-right-face">
 	                <div>
-	                    <a href="">
-	                        <img width="48" height="48" src="../assets/images/biggerhacker.jpg" alt="">
-	                    </a>
+	                    <router-link to="#">
+	                        <img width="48" height="48" :src="userMsg.msg.toUser.uImgUrl" alt="">
+	                    </router-link>
 	                </div>
 	            </div>
 	        </div>
-	     
+	     	</template>
 	    </div>
 	</div>
 </template>

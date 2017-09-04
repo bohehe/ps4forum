@@ -42,7 +42,6 @@ class UserController extends HomeController {
 					'uName' => 'Bigger Hacker',
 					'uImgUrl' => env('APP_URL') . '/images/biggerhacker.jpg'
 				],
-				'countNewMsg' => 3,
 				'msgs' => [
 					[
 						'content' => '你好啊',
