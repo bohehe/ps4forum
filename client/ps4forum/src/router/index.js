@@ -14,6 +14,15 @@ import psTradePub from '@/views/ps-trade-pub'
 
 import psUserCommon from '@/views/ps-user-common'
 import psUserMsg from '@/views/ps-user-msg'
+import psUserReply from '@/views/ps-user-reply'
+import psUserCollection from '@/views/ps-user-collection'
+import psUserPosts from '@/views/ps-user-posts'
+import psUserFollow from '@/views/ps-user-follow'
+import psUserTrade from '@/views/ps-user-trade'
+import psUserSetting from '@/views/ps-user-setting'
+
+
+
 
 Vue.use(Router)
 
@@ -79,10 +88,40 @@ export default new Router({
       children: [
         {
           // 当 /user/:id/msg 匹配成功，
-          // UserMsg 会被渲染在 User组件 的 <router-view> 中
+          // UserMsg 会被渲染在 psUserCommon 组件 的 <router-view> 中
           path: 'msg',
           name: 'user-msg',
           component: psUserMsg
+        },
+        {
+          path: 'reply',
+          name: 'user-reply',
+          component: psUserReply
+        },
+        {
+          path: 'collection',
+          name: 'user-collection',
+          component: psUserCollection
+        },
+        {
+          path: 'posts',
+          name: 'user-posts',
+          component: psUserPosts
+        },
+        {
+          path: 'follow',
+          name: 'user-follow',
+          component: psUserFollow
+        },
+        {
+          path: 'trade',
+          name: 'user-trade',
+          component: psUserTrade
+        },
+        {
+          path: 'setting',
+          name: 'user-setting',
+          component: psUserSetting
         }
       ]
     }
