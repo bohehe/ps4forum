@@ -38,6 +38,8 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/tradeDetail', 'Home\TradeController@getTradeDetail');
 
 	Route::get('/userBgImg', 'Home\UserController@getUserBgImg');
+	Route::get('/userMsg', 'Home\UserController@getUserMsg');
+	Route::get('/userMsgList', 'Home\UserController@getUserMsgList');
 
 });
 
