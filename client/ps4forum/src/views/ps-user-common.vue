@@ -16,7 +16,7 @@
 	      <div class="row">
 	          <div id="user-tab" class="col-md-12">
 	              <ul class="col-md-8 col-md-push-2">
-	                  <li class="active">
+	                  <li v-bind:class="isActive">
 	                  	<router-link :to="{ name: 'user-msg', params: { id: 123 } }">留言</router-link>
 	                  </li>
 	                  <li>
@@ -53,6 +53,12 @@
 		data () {
 			return {
 				bgImgUrl: ''
+			}
+		},
+
+		computed: {
+			isActive (navName) {
+				return 'active'
 			}
 		},
 
