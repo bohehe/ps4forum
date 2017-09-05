@@ -40,6 +40,7 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/userBgImg', 'Home\UserController@getUserBgImg');
 	Route::get('/userMsg', 'Home\UserController@getUserMsg');
 	Route::get('/userMsgList', 'Home\UserController@getUserMsgList');
+	Route::get('/userReply', 'Home\UserController@getUserReply');
 
 });
 

@@ -70,6 +70,5 @@
 	}
 </script>
 <style>
-	@import '../assets/css/userGlobal.css';
 	@import '../assets/css/userMsg.css';
 </style>

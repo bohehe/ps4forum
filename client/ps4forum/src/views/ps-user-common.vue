@@ -64,3 +64,6 @@
 		}
 	}
 </script>
+<style>
+	@import '../assets/css/userGlobal.css';
+</style>

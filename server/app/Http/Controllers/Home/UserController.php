@@ -73,4 +73,31 @@ class UserController extends HomeController {
 		return response()->json($data);
 	}
 
+
+	public function getUserReply () {
+		$data = [
+			[
+				'uid' => 1234,
+				'uName' => '风与可爱的你',
+				'uImgUrl' => env('APP_URL') . '/images/biggerhacker.jpg',
+				'Date' => '2017-02-02 14:13',
+				'content' => '星辰大海。星辰大海。星辰大海。',
+				'title' => '血源诅咒DLC怎么进入啊',
+				'postsId' => 434,
+				'postsType' => 'game'
+			],
+			[
+				'uid' => 1222,
+				'uName' => '风与可爱的你',
+				'uImgUrl' => env('APP_URL') . '/images/biggerhacker.jpg',
+				'Date' => '2017-02-02 14:13',
+				'content' => '测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。测试评论。',
+				'title' => '血源诅咒DLC怎么进入啊',
+				'postsId' => 213,
+				'postsType' => 'posts'
+			]
+		];
+		return response()->json($data);
+	}
+
 }
