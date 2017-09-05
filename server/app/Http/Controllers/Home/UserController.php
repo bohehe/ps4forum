@@ -100,4 +100,65 @@ class UserController extends HomeController {
 		return response()->json($data);
 	}
 
+
+	public function getUserCollection () {
+		$data = [
+			[
+				'postId' => 1232,
+				'postType' => 'posts',
+				'title' => '一周目被宇宙之女打成象拔蚌，求大佬带带~~',
+				'content' => '萌新第一次玩血源，跟着黑桐谷歌的教程一直打到宇宙之女，实在太难了打不过，求来个大佬带带',
+				'countReply' => 14,
+				'Date' => '13分钟前'
+			],
+			[
+				'postId' => 6576,
+				'postType' => 'game',
+				'title' => '我要测试',
+				'content' => '这是一个测试的posts',
+				'countReply' => 52,
+				'Date' => '10分钟前'
+			]
+		];
+		return response()->json($data);
+	}
+
+	public function getUserPosts () {
+		$data = [
+			[
+				'postId' => 434,
+				'title' => '温暖我凡事别再放心上',
+				'content' => '快把这杯酒满上，干了这杯',
+				'countReply' => 43,
+				'Date' => '2014-05-25'
+			],
+			[
+				'postId' => 12,
+				'title' => '温暖我凡事别再放心上',
+				'content' => '快把这杯酒满上，干了这杯',
+				'countReply' => 43,
+				'Date' => '2014-05-25'
+			]
+		];
+		return response()->json($data);
+	}
+
+	public function getUserFollow () {
+		$data = [
+			[
+				'uid' => 13,
+				'uName' => 'good hunter',
+				'uImgUrl' => env('APP_URL') . '/images/avator.png',
+				'intro' => '个人简介、个人简介、个人简介、个人简介、个人简介、'
+			],
+			[
+				'uid' => 1231,
+				'uName' => 'good hunter',
+				'uImgUrl' => env('APP_URL') . '/images/avator.png',
+				'intro' => '个人简介、个人简介、个人简介、个人简介、个人简介、'
+			]
+		];
+		return response()->json($data);
+	}
+
 }

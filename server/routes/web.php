@@ -41,6 +41,9 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/userMsg', 'Home\UserController@getUserMsg');
 	Route::get('/userMsgList', 'Home\UserController@getUserMsgList');
 	Route::get('/userReply', 'Home\UserController@getUserReply');
+	Route::get('/userCollection', 'Home\UserController@getUserCollection');
+	Route::get('/userPosts', 'Home\UserController@getUserPosts');
+	Route::get('/userFollow', 'Home\UserController@getUserFollow');
 
 });
 

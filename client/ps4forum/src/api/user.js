@@ -39,3 +39,33 @@ export function getUserReply (url, params) {
 		}
 	})
 }
+
+export function getUserCollection (url, params) {
+	return axios.get(url, {
+		params: params
+	}).then(res => {
+		if (res.status == 200) {
+			return Promise.resolve(res.data)
+		}
+	})
+}
+
+export function getUserPosts (url, params) {
+	return axios.get(url, {
+		params: params
+	}).then(res => {
+		if (res.status == 200) {
+			return Promise.resolve(res.data)
+		}
+	})
+}
+
+export function getUserFollow (url, params) {
+	return axios.get(url, {
+		params: params
+	}).then(res => {
+		if (res.status == 200) {
+			return Promise.resolve(res.data)
+		}
+	})
+}
