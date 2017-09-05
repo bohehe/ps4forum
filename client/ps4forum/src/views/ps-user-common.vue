@@ -16,27 +16,27 @@
 	      <div class="row">
 	          <div id="user-tab" class="col-md-12">
 	              <ul class="col-md-8 col-md-push-2">
-	                  <li v-bind:class="isActive">
-	                  	<router-link :to="{ name: 'user-msg', params: { id: 123 } }">留言</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-reply', params: { id: 123 } }">回复</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-collection', params: { id: 123 } }">收藏</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-posts', params: { id: 123 } }">帖子</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-follow', params: { id: 123 } }">关注</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-trade', params: { id: 123 } }">买卖</router-link>
-	                  </li>
-	                  <li>
-	                  	<router-link :to="{ name: 'user-setting', params: { id: 123 } }">设置</router-link>
-	                  </li>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-msg', params: { id: 123 } }">
+                  		<a>留言</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-reply', params: { id: 123 } }">
+                  		<a>回复</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-collection', params: { id: 123 } }">
+                  		<a>收藏</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-posts', params: { id: 123 } }">
+                  		<a>帖子</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-follow', params: { id: 123 } }">
+                  		<a>关注</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-trade', params: { id: 123 } }">
+                  		<a>买卖</a>
+                  	</router-link>
+                  	<router-link active-class="active" tag="li" :to="{ name: 'user-setting', params: { id: 123 } }">
+                  		<a>设置</a>
+                  	</router-link>
 	              </ul>
 	          </div>
 	          <router-view></router-view>
@@ -53,12 +53,6 @@
 		data () {
 			return {
 				bgImgUrl: ''
-			}
-		},
-
-		computed: {
-			isActive (navName) {
-				return 'active'
 			}
 		},
 
