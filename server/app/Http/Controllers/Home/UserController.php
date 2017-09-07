@@ -161,4 +161,24 @@ class UserController extends HomeController {
 		return response()->json($data);
 	}
 
+	public function getUserTrade () {
+		$data = [
+			[
+				'postId' => 434,
+				'title' => '求购《CODE VEIN 噬血代码》~~',
+				'content' => '万代南梦宫娱乐今日（8月13日）宣布，戏剧性探索动作RPG游戏《CODE VEIN 噬血代码》将于2018年推出PS4／Xbox One／STEAM繁体中文版。',
+				'countReply' => 43,
+				'Date' => '2014-05-25'
+			],
+			[
+				'postId' => 12,
+				'title' => '求购《CODE VEIN 噬血代码》~~',
+				'content' => '万代南梦宫娱乐今日（8月13日）宣布，戏剧性探索动作RPG游戏《CODE VEIN 噬血代码》将于2018年推出PS4／Xbox One／STEAM繁体中文版。',
+				'countReply' => 43,
+				'Date' => '2014-05-25'
+			]
+		];
+		return response()->json($data);
+	}
+
 }

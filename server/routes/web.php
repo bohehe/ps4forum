@@ -44,6 +44,7 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/userCollection', 'Home\UserController@getUserCollection');
 	Route::get('/userPosts', 'Home\UserController@getUserPosts');
 	Route::get('/userFollow', 'Home\UserController@getUserFollow');
+	Route::get('/userTrade', 'Home\UserController@getUserTrade');
 
 });
 
