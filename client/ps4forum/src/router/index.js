@@ -21,7 +21,12 @@ import psUserFollow from '@/views/ps-user-follow'
 import psUserTrade from '@/views/ps-user-trade'
 import psUserSetting from '@/views/ps-user-setting'
 
-
+import psUserCenter from '@/views/ps-user-center'
+import psUserCenterGame from '@/views/ucenter/ps-user-center-game'
+import psUserCenterMsg from '@/views/ucenter/ps-user-center-msg'
+import psUserCenterCollection from '@/views/ucenter/ps-user-center-collection'
+import psUserCenterPosts from '@/views/ucenter/ps-user-center-posts'
+import psUserCenterTrade from '@/views/ucenter/ps-user-center-trade'
 
 
 Vue.use(Router)
@@ -122,6 +127,37 @@ export default new Router({
           path: 'setting',
           name: 'user-setting',
           component: psUserSetting
+        }
+      ]
+    },
+    {
+      path: '/u/:id',
+      component: psUserCenter,
+      children: [
+        {
+          path: 'game',
+          name: 'u-game',
+          component: psUserCenterGame
+        },
+        {
+          path: 'msg',
+          name: 'u-msg',
+          component: psUserCenterMsg
+        },
+        {
+          path: 'collection',
+          name: 'u-collection',
+          component: psUserCenterCollection
+        },
+        {
+          path: 'posts',
+          name: 'u-posts',
+          component: psUserCenterPosts
+        },
+        {
+          path: 'trade',
+          name: 'u-trade',
+          component: psUserCenterTrade
         }
       ]
     }
