@@ -72,9 +72,9 @@
 	}
 </script>
 <style>
-  .user-posts .list-group-item {
+/*   .user-posts .list-group-item {
     border: none;
-  }
+  } */
   .u-game-title {
     padding: 5px 0;
   }
