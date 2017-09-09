@@ -39,6 +39,10 @@
 	            </div>
 	        </div>
 	     	</template>
+	     	<div class="form-group">
+			    <input style="display: inline-block;width: 88%;" type="text" class="form-control" id="name" placeholder="请输入回复">
+			    <input class="btn btn-default" type="button" value="回复">
+			  </div>
 	    </div>
 	</div>
 </template>

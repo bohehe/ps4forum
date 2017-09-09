@@ -8,7 +8,6 @@
 }
 #user-msg-list{
 	box-shadow: 0 0 3px #908686;
-	height: 700px;
 	overflow: scroll;
 }
 #user-msg-list li{
