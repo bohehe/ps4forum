@@ -44,7 +44,7 @@
 	     	</template>
 	    </div>
 	    <div id="msg-input" class="form-group col-md-9 user-msg hidden">
-			    <input style="display: inline-block;width: 88%;" type="text" class="form-control" id="name" placeholder="请输入回复">
+			    <textarea class="form-control" rows="5"></textarea>
 			    <input class="btn btn-default" type="button" value="留言">
 			 </div>
 	</div>

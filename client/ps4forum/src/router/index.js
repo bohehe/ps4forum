@@ -11,6 +11,7 @@ import psPostsDetail from '@/views/ps-postsDetail'
 import psTradeList from '@/views/ps-trade-list'
 import psTradeDetail from '@/views/ps-trade-detail'
 import psTradePub from '@/views/ps-trade-pub'
+import psPubPosts from '@/views/ps-pub-posts'
 
 import psUserCommon from '@/views/ps-user-common'
 import psUserMsg from '@/views/ps-user-msg'
@@ -66,6 +67,11 @@ export default new Router({
       path: '/posts',
       name: 'posts-list',
       component: psPostsList
+    },
+    {
+      path: '/posts/pub',
+      name: 'pub-posts',
+      component: psPubPosts
     },
     {
       path: '/posts/:id',

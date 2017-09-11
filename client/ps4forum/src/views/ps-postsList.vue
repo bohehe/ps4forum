@@ -15,6 +15,7 @@
                       <input type="text" class="form-control" placeholder="搜帖子...">
                       <span class="input-group-btn">
                           <button class="btn btn-primary" type="button">搜索</button>
+                          <router-link to="#pub" class="btn btn-success">发帖</router-link>
                       </span>
                   </div>
               </div>
@@ -47,6 +48,9 @@
                   <li><a href="#">5</a></li>
                   <li><a href="#">&raquo;</a></li>
               </ul>
+              <div id="game-comment" style="margin: 30px;">
+                <ps-comment-emoji></ps-comment-emoji>
+              </div>
           </div>
       </div>
   </div>
@@ -54,6 +58,7 @@
 <script>
 	import '@/assets/js/touchTouch.jquery.js'
 	import psPostsList from '@/components/common/ps-posts-list'
+  import psCommentEmoji from '@/components/common/ps-comment-emoji'
 	
 	export default {
 		name: 'ps-postsList',
@@ -65,7 +70,8 @@
 		},
 
 		components: {
-			psPostsList
+			psPostsList,
+      psCommentEmoji
 		}
 	}
 </script>
