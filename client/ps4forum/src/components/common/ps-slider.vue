@@ -25,12 +25,17 @@
       }
     },
 
-    created(){
+    created () {
       //获取banner数据
       getIndexBannerList(this.API_URL + '/indexBannerList', []).then((res => {
        this.bannerList = res
       }))
-      
+    },
+
+    mounted () {
+      $('.carousel').carousel({
+        interval: 4000
+      })
     }
   }
 
