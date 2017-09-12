@@ -10,6 +10,9 @@
               <a class="imgBtn" href="javascript:void(0);">
                 <img src="../../assets/images/emoji/tieba/25.jpg">
               </a>
+              <button  style="margin-top: 0.7%;" type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-picture"></span> Picture
+              </button>
           </div>
           <div contenteditable="true" class="Input_text"></div>
       </div>

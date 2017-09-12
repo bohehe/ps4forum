@@ -79,4 +79,5 @@
 	@import '../assets/css/touchTouch.css';
 	@import '../assets/css/game-thumb-img.css';
 	@import '../assets/css/postsList.css';
+  @import '../assets/css/myemojiPl.css';
 </style>
