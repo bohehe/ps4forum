@@ -1,13 +1,13 @@
-banner表
-
+banner轮播图表
 	id						int 		主键自增
 	type 					tinyint 	banner分类，预留将来可能出现的banner
 	imgUrl					varchar		banner图链接
 	title 					varchar		图片title
 	link 					varchar		外链
+	status					tinyint		正常1，已删除-1，禁用0
 
 
-news表
+news新闻表
 	id						int			主键自增
 	title					varchar		标题
 	content					text		富文本编辑器编辑的文章内容
@@ -16,18 +16,114 @@ news表
 	create_date				datetime	创建时间
 	update_date				datetime	更新时间
 	reply_update_date		datetime	最新回复时间
+	count_zan				int			赞数量
+	count_reply				int			评论量
+	status					tinyint		正常1，已删除-1，禁用0
+	is_fine					tinyint		是否为精品：默认否-1，是1
+	is_top					tinyint		是否为置顶：默认否-1，是1
 
 
-comment表
+comment评论表
 	id						int			主键自增
 	uid						int			回复用户的UID
-	to_uid					int			被回复用户的UID
-	type					tinyint		回复类型：新闻，帖子....
-	type_id					tinyint		关联对应类型的ID
+	to_uid					int			被回复用户的UID，默认为0
+	type					tinyint		类型：新闻1，帖子2，买卖3
+	data_id					tinyint		关联类型的数据ID
 	content					varchar		回复内容
 	parent_id				int 		回复评论的id，默认为0
 	create_date				datetime	创建时间
+	status					tinyint		正常1，已删除-1，禁用0
 
 
-zan表
-	
+zan点赞表
+	id 						int			主键自增
+	type					tinyint		类型：新闻1，帖子2，买卖3
+	data_id					int			关联的类型的数据ID
+	uid 					int			点赞的用户的UID
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+collection收藏表
+	id 						int 		主键自增
+	uid 					int 		用户UID
+	type 					tinyint		类型：新闻1，帖子2，买卖3
+	data_id					int			关联类型的数据ID
+	create_date				datetime	收藏时间
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+posts帖子表
+	id 						int 		主键自增
+	uid 					int 		用户UID
+	title 					varchar		帖子标题
+	content 				text 		帖子内容
+	create_date				datetime	发帖时间
+	status					tinyint		正常1，已删除-1，禁用0
+	type 					tinyint		攻略1，吐槽2，心得3
+	is_fine					tinyint		是否为精品：默认否-1，是1
+	is_top					tinyint		是否为置顶：默认否-1，是1
+
+
+posts_reply回帖表
+	id 						int			主键自增
+	posts_id				int 		主贴id
+	uid 					int 		回帖人的UID
+	content 				text 		回帖内容
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+posts_replies回帖回复表
+	id 						int 		主键自增
+	posts_reply_id	 		int 		关联回复回帖的ID
+	uid 					int 		回复人的UID
+	content 				varchar 	回复内容
+	create_date 			datetime	回复时间
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+game游戏信息表
+	id 						int 		主键自增
+	public_date				datetime	发布时间
+	is_public				tinyint 	是否发售：是1，否-1
+	language				tinyint		语言：简体中文1，繁体中文2，英文3，日文4，韩文5
+	game_type				tinyint 	游戏类型：RPG1，动作&冒险2，运动&模拟3，射击4，策略5，其他6
+	score					tinyint		用户评星：1-5
+	thumbImgUrl				varchar		封面图
+	title					varchar		游戏名
+	intro					varchar		简介
+	serial_name				varchar		所属系列
+	developer				varchar		开发商
+	platform				varchar		平台: json
+	public_period			varchar		发售阶段
+	price					decimal		价格
+	game_remark				varchar		点评
+	create_date				datetime    创建时间
+	status					tinyint		正常1，已删除-1，禁用0
+	star 					float		综合评星
+
+
+gameImg游戏截图表
+	id 						int 		主键自增
+	game_id					int 		游戏ID
+	imgUrl 					varchar		图片URL
+	create_date				datetime    创建时间
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+game_star游戏评星表
+	id 						int 		主键自增
+	game_id					int 		游戏ID
+	uid 					int 		评星用户UID
+	star 					float		评星
+	create_date				datetime    发布时间
+	status					tinyint		正常1，已删除-1，禁用0
+
+
+game_comment游戏评价表
+	id 						int 		主键自增
+	uid 					int 		用户UID
+	content					varchar		评价内容
+	create_date				datetime    发布时间
+	status					tinyint		正常1，已删除-1，禁用0
+
+
