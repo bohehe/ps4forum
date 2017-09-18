@@ -1,0 +1,33 @@
+banner表
+
+	id						int 		主键自增
+	type 					tinyint 	banner分类，预留将来可能出现的banner
+	imgUrl					varchar		banner图链接
+	title 					varchar		图片title
+	link 					varchar		外链
+
+
+news表
+	id						int			主键自增
+	title					varchar		标题
+	content					text		富文本编辑器编辑的文章内容
+	thumbs					varchar		封面图URL
+	uid						int			作者uid
+	create_date				datetime	创建时间
+	update_date				datetime	更新时间
+	reply_update_date		datetime	最新回复时间
+
+
+comment表
+	id						int			主键自增
+	uid						int			回复用户的UID
+	to_uid					int			被回复用户的UID
+	type					tinyint		回复类型：新闻，帖子....
+	type_id					tinyint		关联对应类型的ID
+	content					varchar		回复内容
+	parent_id				int 		回复评论的id，默认为0
+	create_date				datetime	创建时间
+
+
+zan表
+	
