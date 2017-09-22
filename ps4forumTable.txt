@@ -102,9 +102,10 @@ game游戏信息表
 	star 					float		综合评星
 
 
-gameImg游戏截图表
+	picture图片信息表
 	id 						int 		主键自增
-	game_id					int 		游戏ID
+	data_id					int 		数据ID
+	type 					tinyint 	图片所属类型：游戏1、买卖2
 	imgUrl 					varchar		图片URL
 	create_date				datetime    创建时间
 	status					tinyint		正常1，已删除-1，禁用0
@@ -121,9 +122,50 @@ game_star游戏评星表
 
 game_comment游戏评价表
 	id 						int 		主键自增
-	uid 					int 		用户UID
+	game_id					int 		游戏ID
+	uid 					int 		评星用户UID
+	star 					float		评星
 	content					varchar		评价内容
 	create_date				datetime    发布时间
 	status					tinyint		正常1，已删除-1，禁用0
 
+
+trade游戏买卖信息表
+	id 						int 		主键自增
+	goods_type 				tinyint 	物品类型：游戏1、游戏机2、数码产品3
+	trade_type 				tinyint 	交易类型：出售1、求购2
+	language 				tinyint 	语言：简中1、繁中2、英文3、日文4
+	city					varchar 	城市
+	version 				varchar		版本：国行，港版....
+	qq						varchar 	qq号
+	wechat					varchar 	微信号
+	price					decimal		价格
+	title					varchar 	标题
+	intro					varchar 	简介
+	uid 					int 		用户UID
+	create_date 			datetime	创建时间
+
+
+msg留言表
+	id 						int 		主键自增
+	from_uid				int 		来自uid
+	to_uid					int 		发给uid
+	content 				varchar 	内容
+	is_new					tinyint 	是否为新消息：是1，否2
+
+
+reply回复表
+	id 						int 		主键自增
+	uid 					int 		用户UID
+	content					varchar 	内容
+	title					varchar 	标题
+	data_id					int 		数据ID
+	type 					tinyint 	类型：新闻1、论坛2、游戏3、买卖4
+
+
+follow关注表
+	id 						int 		主键自增
+	uid 					int 		用户UID
+	follow_uid				int 		关注用户的uid
+	create_date				datetime	创建时间
 
