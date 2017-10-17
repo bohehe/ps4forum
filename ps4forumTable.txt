@@ -169,3 +169,23 @@ follow关注表
 	follow_uid				int 		关注用户的uid
 	create_date				datetime	创建时间
 
+
+trophy表
+	uid 					int 		主键自增
+	platinum 				int 		白金奖杯数
+	gloden 					int 		黄金奖杯数
+	silvery 				int 		银奖杯数
+	brass 					int  		黄铜奖杯数
+	total 					int 		总奖杯数
+
+
+user表
+	id 						int 		主键自增
+	psn_id					varchar		psn账号
+	password 				varchar 	本站的登录密码（不是PSN的）
+	face_url 				varchar		头像图片的URL
+	email 					varchar 	邮箱地址
+	
+
+
+
