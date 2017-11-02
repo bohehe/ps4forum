@@ -47,5 +47,3 @@ Route::group(['prefix' => 'api'], function () {
 	Route::get('/userTrade', 'Home\UserController@getUserTrade');
 
 });
-
-
